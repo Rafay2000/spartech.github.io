@@ -1,0 +1,288 @@
+<!--alle ikoner er fra https://fontawesome.com/-->
+<!--også tatt med noen koder fra forelesninger og youtube, 
+  men jeg endret på navn og lagde oppsettet jeg ville ha det på-->
+
+<!DOCTYPE html>
+<html lang="nb">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="keywords" content="SEO, UU, Hjelp, Løsning, Profit">
+    <meta name="description" content="Finn ut hvordan man gjør siden din mer attraktiv, 
+     organisert og brukervennlig ved hjelp av metoder som SEO og UU. 
+     Vil du ha mer gevinst og brukertrafikk? Da kom du til det rette stedet!">
+    <meta name="author" content="Rafay Akbani">
+
+    <meta property="og:url"           content="https://itstud.hiof.no/~rafaya/Spartech/index.html" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="Spartech.no" />
+    <meta property="og:description"   content="Trenger hjelp med din eller bedriftens nettside? Ikke nøl med trykke her, vi viser deg!" />
+    <meta property="og:image"         content="https://itstud.hiof.no/~rafaya/Spartech/images/spartech-high-resolution-logo-color-on-transparent-background.webp" />
+    <meta property="og:image:alt"     content="sparta helmet" />
+
+    <meta name="twitter:title" content="Spartech.no">
+    <meta name="twitter:card"  content="website">
+    <meta property="twitter:domain" content="itstud.hiof.no">
+    <meta property="twitter:url" content="https://itstud.hiof.no/~rafaya/Spartech/index.html">
+    <meta name="twitter:description" content="Trenger hjelp med din eller bedriftens nettside? Ikke nøl med trykke her, vi viser deg!">
+    <meta name="twitter:image" content="https://itstud.hiof.no/~rafaya/Spartech/images/spartech-high-resolution-logo-color-on-transparent-background.webp">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="images/spartech-favicon-16-16.webp">
+    <!--så på https://www.w3schools.com/html/html_favicon.asp tut om hvordan man legger til favicon-->
+    <title>Mainpage - Spartech</title>
+  </head>
+  <body>
+    <div id="front-page-container">
+      <!--Nettside header-->
+      <header>
+        <!--Nettsidens hovedmeny med logo over menypunktene-->
+        <nav>
+          <a href="index.html" title="Tilbake til hovedmeny">
+            <img id="logo" src="images/spartech-high-resolution-logo-color-on-transparent-background.webp" alt="spartech logo"
+          /></a>
+          <!--lagde min egen logo på https://app.logo.com/dashboard/logo_e5596280-ff68-4f74-8b9f-ebeebd1777a5/your-logo-files, var gratis-->
+          <a href="#" id="ham-icon" aria-label="hamburger icon" onclick="hamMenu()"
+            ><i class="fa-solid fa-bars"></i
+          ></a>
+          <!--javascript knappen for hamburger meny som jeg tokk fra responsive design forelesningen
+              https://github.com/ackarlse/webutvikling2022-->
+          <ul id="nav-menu" style="display: block">
+            <li>
+              <a href="index.html"><i class="fa-solid fa-house"></i> Hjem</a>
+            </li>
+            <li>
+              <a href="innholduuvsceo.html"
+                ><i class="fa-solid fa-hands-holding-circle"></i> UU vs SEO</a
+              >
+            </li>
+            <li>
+              <a href="innholdcss.html"
+                ><i class="fa-solid fa-desktop"></i> CMS</a
+              >
+            </li>
+            <li>
+              <a href="innholdanalyse.html"
+                ><i class="fa-solid fa-magnifying-glass-chart"></i> Analyse</a
+              >
+            </li>
+            <li>
+              <a href="kontaktoss.html"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i>
+                Kontakt</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="header-vid-background">
+          <!--https://www.youtube.com/watch?v=y9ITxSzjZUc, så på youtube tut for å se hvordan man gjør video tag som header-->
+          <video autoplay loop muted>
+            <source src="videos/blue_dot_particles.mp4" type="video/mp4">
+            <!--Video by <a href="https://pixabay.com/users/tommyvideo-3092371/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=video&amp;utm_content=5200">Tomislav Jakupec</a> from <a href="https://pixabay.com//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=video&amp;utm_content=5200">Pixabay</a>-->
+          </video>
+          <div class="header-background-text">
+            <h1>Et globalt hub</h1>
+            <h2>For alle utviklere</h2>
+            <a href="kontaktoss.html" class="button-header">Kontakt oss</a>
+          </div>
+        </div>
+      </header>
+      <section>
+        <!--Koden for å få image slider på skjermen med knapp. Så eksempelet via youtube video: https://www.youtube.com/watch?v=0wvrlOyGlq0&t=144s
+            Kopierte noen linjer og endra ut i hva jeg vil ha-->
+        <div class="slider-container">
+          <!--Koden for å få image slider på skjermen med knapp. Så eksempelet via youtube video: https://www.youtube.com/watch?v=0wvrlOyGlq0&t=144s
+            Kopierte noen linjer og endra ut i hva jeg vil ha-->
+          <div class="slide-style">
+            <div class="slides">
+              <input type="radio" name="dot-btn" id="radiobtn1" checked>
+              <input type="radio" name="dot-btn" id="radiobtn2">
+              <input type="radio" name="dot-btn" id="radiobtn3">
+              <div class="swipe first">
+                <img src="images/lanight.webp" alt="city">
+                <!--<a href="https://www.freepik.com/free-photo/beautiful-aerial-shot-los-angeles-night_7553581.htm#query=city%20night&position=49&from_view=search&track=sph">Image by wirestock</a> on Freepik-->
+              </div>
+              <div class="swipe">
+                <img src="images/happyemoji.webp" alt="office desk">
+                <!--Image by <a href="https://www.freepik.com/free-photo/collage-customer-experience-concept_25053721.htm#query=customer&position=30&from_view=search&track=sph">Freepik</a>-->
+              </div>
+              <div class="swipe">
+                <img src="images/dollarmoney.webp" alt="city map">
+                <!--<a href="https://www.freepik.com/free-photo/billie-dollar-money-background_1025791.htm#query=money&position=16&from_view=search&track=sph">Image by jcomp</a> on Freepik-->
+              </div>
+              <!--Koden for å få image slider på skjermen med knapp. Så eksempelet via youtube video: https://www.youtube.com/watch?v=0wvrlOyGlq0&t=144s
+               Kopierte noen linjer og endra ut i hva jeg vil ha-->
+              <div class="navigation-for-slider-auto"></div>
+              <div class="auto-button1"></div>
+              <div class="auto-button2"></div>
+              <div class="auto-button3"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--slutten på slider koden-->
+      <aside class="info-text">
+        <!--Starten på teksten ved høyre-->
+        <h2>Du lurer sikkert på</h2>
+        <h3>Hvem vi er?</h3>
+        <p>
+          Vi bidrar med å hjelpe utviklere for å forbedre nettsiden eller tjenesten sin. 
+          Fornøyde kunder er jo prioriteten, for tross alt penger er målet.
+        </p>
+        <p>
+           Aldri tap penger, nå kan investorene takke deg.
+        </p>
+        <p>
+           Alltid få en god gevinst, nå du kan endelig være rik.
+        </p>
+        <!--Koden for å få image slider på skjermen med knapp. Så eksempelet via youtube video: https://www.youtube.com/watch?v=0wvrlOyGlq0&t=144s
+            Kopierte noen linjer og endra ut i hva jeg vil ha-->
+        <div class="navigation-for-slider">
+          <label for="radiobtn1" class="clickable-btn"><span class="hidden-text">Carousel toggle left</span></label>
+          <label for="radiobtn2" class="clickable-btn"><span class="hidden-text">Carousel toggle middle</span></label>
+          <label for="radiobtn3" class="clickable-btn"><span class="hidden-text">Carousel toggle right</span></label>
+        </div>
+      </aside>
+      <main>
+        <article>
+          <!--Oppsettet for article boksene, så på eksempler fra de forelesningene vi har hatt
+                https://github.com/ackarlse/webutvikling2022-->
+          <img src="images/uuvsseo.webp" alt="uu versus seo">
+          <!--<a href="https://www.freepik.com/free-vector/gradient-benchmark-illustration_24750029.htm#page=5&query=comparison&position=49&from_view=search&track=sph">Image by pikisuperstar</a> on Freepik-->
+          <h2>UU vs SEO</h2>
+          <h3>Oktober 27, 2022</h3>
+          <p>
+            UU og SEO er to viktige metoder som er ment for å få siden din til å bli mer brukervennlig, hva kreves det... 
+          </p>
+          <a class="button-article" href="innholduuvsceo.html">Trykk her for mer</a>
+        </article>
+        <article>
+          <img src="images/cms.webp" alt="cms">
+          <!--Image by <a href="https://www.freepik.com/free-vector/flat-design-cms-transparent-screen-with-apps_11588039.htm#query=cms&position=2&from_view=search">Freepik</a>-->
+          <h2>CMS</h2>
+          <h3>Oktober 30, 2022</h3>
+          <p>
+            Det finnes mange forskjellige CMS typer. Alle av dem kan variere med funksjoner, metoder og prinsipper...
+          </p>
+          <a class="button-article" href="innholdcss.html">Trykk her for mer</a>
+        </article>
+        <article>
+          <img src="images/analyze.webp" alt="analyze website">
+          <!--<a href="https://www.freepik.com/free-photo/analytics-plan-strategy-insight-concept_17106787.htm#query=analyze%20website&position=4&from_view=search&track=sph">Image by rawpixel.com</a> on Freepik-->
+          <h2>Analyse</h2>
+          <h3>September 27, 2022</h3>
+          <p>
+            Nettsiden her skal bli analysert ved hjelp av verktøy. Vi skal se om SEO, UU og generelle regler blir fulgt...
+          </p>
+          <a class="button-article" href="innholdanalyse.html">Trykk her for mer</a>
+        </article>
+        <!--slutt på artikkel stylen-->
+      </main>
+      <footer>
+        <div id="share-buttons">
+          <iframe title="fb share" src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fitstud.hiof.no%2F~rafaya%2FSpartech%2Findex.html&layout=button&size=large&width=77&height=28&appId" width="77" height="28" style="border:none;overflow:hidden" 
+          allowFullscreen allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+        </iframe>
+        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-url="https://itstud.hiof.no/~rafaya/Spartech/index.html" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js"></script>
+        </div>
+        <div class="container-for-services-policies-socials">
+          <!--Oppsettet for footer, alle info innenfor services, policy or socials
+               Ideen for oppsettet fikk jeg fra https://www.youtube.com/watch?v=VUydBuotmR4-->
+          <div class="services-list">
+            <h3>Services</h3>
+            <ul>
+              <li><a href="innholduuvsceo.html">UU vs SEO</a></li>
+              <li><a href="innholdcss.html">CMS</a></li>
+              <li><a href="innholdanalyse.html">Analyse</a></li>
+            </ul>
+          </div>
+          <div class="policies-list">
+            <h3>Legals</h3>
+            <ul>
+              <li><a href="#">Cookies</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Code of Conduct</a></li>
+            </ul>
+          </div>
+          <div class="socials-list">
+            <h3>Sosiale medier</h3>
+            <ul>
+              <li>
+                <a href="https://www.facebook.com/" title="Finn oss på Facebook"
+                  ><i class="fa-brands fa-square-facebook"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/"
+                  title="Finn oss på Instagram"
+                  ><i class="fa-brands fa-square-instagram"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://twitter.com/?lang=en"
+                  title="Finn oss på Twitter"
+                  ><i class="fa-brands fa-square-twitter"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/" title="Finn oss på LinkedIn"
+                  ><i class="fa-brands fa-linkedin"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!--slutt på første footer container oppsettet-->
+        <div class="container-for-contacts-copyright">
+          <!--Starten av samme oppsett som originale footer container, bar med kontakt info, copyright tekst or link under-->
+          <div class="contacts-list">
+            <h3>Kontakt</h3>
+            <ul>
+              <li>
+                <a href="tel:+4797951330"
+                  >+47 97951330 <i class="fa-solid fa-phone"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.google.com/maps/@37.7887775,-122.3963437,3a,75y,227.76h,111.29t/data=!3m6!1e1!3m4!1sBDAlqbenY21wzDuFjTjxrw!2e0!7i16384!8i8192"
+                >
+                  184 1st St, SF, CA, USA
+                  <i class="fa-solid fa-map-location"></i
+                ></a>
+              </li>
+              <li>
+                <a href="kontaktoss.html">Karriere <i class="fa-solid fa-handshake"></i></a>
+              </li>
+            </ul>
+          </div>
+          <div class="hidden-list">
+            <a href="index.html" title="Tilbake til hovedsiden"
+              ><i class="fa-solid fa-globe"></i
+            ></a>
+          </div>
+          <div class="copyright">
+            <p>
+              &copy; Akbanikov Corp. is an organization that owns the
+              copyrighted property of &copy; Spartech, &copy; Akbani Investments Inc. and &copy;
+              Raf Sauer Firearms & Defense. Copyright 2022. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!--Fikk javascriptet fra forelesningen av responive design
+        https://github.com/ackarlse/webutvikling2022-->
+    <script src="javascript/menuphone.js"></script>
+    <script
+    src="https://kit.fontawesome.com/23dce7417b.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="javascript/carouselauto.js"></script>
+  </body>
+</html>

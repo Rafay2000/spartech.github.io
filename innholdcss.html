@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="nb">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="keywords" content="CMS, Headless CMS, Seamless CMS, Typer CMS">
+    <meta name="description" content="CMS, også skjent som Content Management System er en av løsningen for at alle kan få bygge sin egen nettsiden helt hjemmefra.  
+     Det finnes mange forskjellige yper CMSer og alle de er fornuftige. Finn ut hvilken, og hvordan man bruker det!">
+    <meta name="author" content="Rafay Akbani">
+
+    <meta property="og:url"           content="https://itstud.hiof.no/~rafaya/Spartech/innholdcss.html" />
+    <meta property="og:type"          content="article" />
+    <meta property="og:title"         content="Spartech.no" />
+    <meta property="og:description"   content="Det finnes mange forskjellige CMS typer, men hvorfor har vi så mange og hva er alle dem? Finn ut mer..." />
+    <meta property="og:image"         content="https://itstud.hiof.no/~rafaya/Spartech/images/cms.webp" />
+    <meta property="og:image:alt"     content="cms" />
+
+    <meta name="twitter:title" content="Spartech.no">
+    <meta name="twitter:card"  content="article">
+    <meta property="twitter:domain" content="itstud.hiof.no">
+    <meta property="twitter:url" content="https://itstud.hiof.no/~rafaya/Spartech/innholdcss.html">
+    <meta name="twitter:description" content="Det finnes mange forskjellige CMS typer, men hvorfor har vi så mange og hva er alle dem? Finn ut mer...">
+    <meta name="twitter:image" content="https://itstud.hiof.no/~rafaya/Spartech/images/cms.webp">
+
+    <link rel="stylesheet" type="text/css" href="css/cmsinnhold.css">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="images/spartech-favicon-16-16.webp">
+    <!--så på https://www.w3schools.com/html/html_favicon.asp tut om hvordan man legger til favicon-->
+    <title>CMS Article - Spartech</title>
+  </head>
+  <body>
+    <!--Nettside header-->
+    <div id="front-page-container">
+      <!--Nettside header-->
+      <header>
+        <!--Nettsidens hovedmeny med logo over menypunktene-->
+        <nav>
+          <a href="index.html" title="Tilbake til hovedmeny">
+            <img id="logo" src="images/spartech-high-resolution-logo-color-on-transparent-background.webp" alt="spartech logo"
+          /></a>
+          <!--lagde min egen logo på https://app.logo.com/dashboard/logo_e5596280-ff68-4f74-8b9f-ebeebd1777a5/your-logo-files, var gratis-->
+          <a href="#" id="ham-icon" aria-label="hamburger icon" onclick="hamMenu()"
+            ><i class="fa-solid fa-bars"></i
+          ></a>
+          <!--javascript knappen for hamburger meny som jeg tokk fra responsive design forelesningen
+            https://github.com/ackarlse/webutvikling2022-->
+          <ul id="nav-menu" style="display: block">
+            <li>
+              <a href="index.html"><i class="fa-solid fa-house"></i> Hjem</a>
+            </li>
+            <li>
+              <a href="innholduuvsceo.html"
+                ><i class="fa-solid fa-hands-holding-circle"></i> UU vs SEO</a
+              >
+            </li>
+            <li>
+              <a href="innholdcss.html"
+                ><i class="fa-solid fa-desktop"></i> CMS</a
+              >
+            </li>
+            <li>
+              <a href="innholdanalyse.html"
+                ><i class="fa-solid fa-magnifying-glass-chart"></i> Analyse</a
+              >
+            </li>
+            <li>
+              <a href="kontaktoss.html"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i>
+                Kontakt</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div id="article-img"></div>
+      </header>
+      <main>
+        <ul id="breadcrumbs">
+          <li><a href="index.html">Hjem</a></li>
+          <li><a href="innholdcss.html">CMS</a></li>
+        </ul>
+        <div class="article-content">
+          <h2>Oktober 30, 2022</h2>
+          <h1>Content Management System</h1>
+          <p>
+            Content Management System (CMS) er et system som er ment for opprette innhold i siden, redigere informasjon og lage egen nettside. 
+            CMS gjøre det enklere for brukere for å administrere og publisere informasjon eller innhold uten noen kode erfaring. 
+            Dette kan gjøres via intranett, eller ekstranett som kan gjøres ved egen organisasjon. 
+            En annen metode er å tilgjengeliggjøre informasjon via nettsider på nettet for offentlige brukere.
+          </p>
+          <div class="text-line"></div>
+          <span class="title-colored">Hvorfor man bruker det</span>
+          <p>
+            Vi bruker CMS system fordi det er enklere vedlikehold, fleksibelt med tanke på utforming og koding, 
+            kan bygges på database (DB), gjør sånn at kommunikasjon med databasen (DB) blir enklere og mer effektiv, og for backend systemer.
+            CMS har med et område for intern administrasjon, altså back-end, også en offentlig område synlig for brukere som er lett tilgjengelig, altså frontend.
+            Webredaktøren bestemmer hva som kan, eller skal vises til brukeren. Denne informasjonen blir lagret i databasen (DB). 
+            Det finnes mange typer CMS blant annet Wordpress, Typo3, Joomla osv. Episerver er den mest brukte for bedrifter i Norden. 
+            Mens Wordpress og Joomla er mest brukt for bloggere og småbedrifter. CMS kreves ingen koding.
+          </p>
+          <div class="text-line"></div>
+          <span class="title-colored">Headless og Seamless CMS</span>
+          <p>
+            Det finnes Headless CMS og Seamless CMS, men de to CMS er helt forskjellige fra hverandre og er den store "buzzword" i Utvikler-bransjen. 
+            En Headless CMS består av laget innhold som er separert fra det du ser på nettsiden, innholdene er hentet fra en fra en API (Application Programming Interface).
+            Det betyr du har mindre teknologiske begrensninger og mer fleksibilitet for det innholdet nettsiden kan ta med, flere komponenter og er mer fornuftig for utviklere. 
+            En Headless CMS er mer fornuftig for eksisterende nettsider, da slipper man å kode mye for at det skal fungere siden koden er implementert fra før.
+          </p>
+          <p>
+            Seamless CMS, også kalt Tradisjonelt CMS innebærer at alt innhold er lagret i en database (DB), og er lett tilgjengelig for alle via en admin-panel som eksempel på Wordpress. 
+            Man HAR alle de grunnleggende funksjonene som oppretting av innhold, redigering og sletting. 
+            Det er en mengde kode som er henten fra en mal, som er veldig lett tilgjengelig siden det krever ingen kode erfaring. 
+            Det betyr også at dette er forhåndsdefinert, som betyr at du ikke kan endre på alt. 
+            Seamless CMS er praktisk dersom du ikke er avhengig av de teknologiske funksjonene, avanserte knapper og integrasjoner for din nettside.
+          </p>
+          <div class="text-line"></div>
+          <span class="title-colored">Sammendrag</span>
+          <p>
+            Kort fortalt gir Headless CMS deg muligheten til å legge inn det ekstra som innhold og rådata, samtidig der utvikleren kan endre på oppsettet og designet av nettsiden.
+            Mens en Seamless (Tradisjonelt) CMS har admin funksjonen til lage en nettside som er lagret i databasen (DB) uten noe form for kode erfaring, med begrensninger selvfølgelig.
+          </p>
+          <div class="text-line"></div>
+          <span class="title-colored">CMS Typer Tabell</span>
+        </div>
+        <div class="table-list">
+        <div class="table-item"><i class="fa-solid fa-table"></i></div>
+        <div class="table-item">Fordeler</div>
+        <div class="table-item">Ulemper</div>
+        <div class="table-item">Forskjell</div>
+        <div class="table-item">CCMS</div>
+        <div class="table-info">Gjenbrukbart, kontroll og vedlikehold, enkelt kilde, sporbarhet, bra for hjemmekontor</div>
+        <div class="table-info">Komponentene er kun lagret en gang, maksimum gjenbruk av innhold</div>
+        <div class="table-info">Tar komponenter som keywords, fraser og bilder, deretter lagrer det i sentral repository</div>
+        <div class="table-item">DMS</div>
+        <div class="table-info">Versjonskontroll, søkbart, publiserende metadata, sikkerhet, øko-vennlig, trenger ikke å printe</div>
+        <div class="table-info">Hvis skytjenester er nede, eller ikke har tilgang så er ikke viktige dokumenter tilgjengelig</div>
+        <div class="table-info">Alle dokumenter og filtyper blir lagret i skytjenesten, med hjelp av automatisert system</div>
+        <div class="table-item">ECM</div>
+        <div class="table-info">Deler informasjon internt til ansatte, sparer lagringsplass, veldig fleksibelt, effektiv </div>
+        <div class="table-info">Hvis systemet blir hacket, eller er nede er det null tilgang, sletter filer etter en viss periode</div>
+        <div class="table-info">Sender dokumenter og informasjon til riktige kunder og ansatte, går gjennom organisasjonen</div>
+        <div class="table-item">WCMS</div>
+        <div class="table-info">Dynamiske nettside uten kode, kan endre nettsiden, automatiserende system, admin-system</div>
+        <div class="table-info">Fungerer kun for nettside innhold, open source, dårlig sikkerhet, stadig oppdatering</div>
+        <div class="table-info">Kreves ingen programmering evner, ment for samarbeid, forfattere kan bruke det</div>
+        <div class="table-item">DAM</div>
+        <div class="table-info">En bibliotek for digitale innhold, skybasert, digital publisering som sosial medier</div>
+        <div class="table-info">Hvis det blir hacket eller serveren er nede, så er det ikke noe tilgang</div>
+        <div class="table-info">Finne frem bilder, lyder, assets, dokumenter digitalt i en bibliotek, kan lagres og deles</div>
+        </div>
+        <p id="sources">
+          Kilder: https://www.optimizely.com/no/insights/blog/hva-er-et-cms
+          https://www.mentimeter.com/app/presentation/alug53jbdcanf8sobtepwfwd1n2ov3vd/wj5oksbv91an, 
+          https://guilty.no/blogg/headless-cms-slik-er-det-til-forskjell-fra-et-tradisjonelt-cms, 
+          https://www.ixiasoft.com/types-of-content-management-systems/
+        </p>
+        <div id="return-to-main-page">
+          <a href="#">Tilbake til startsiden ^</a>
+        </div>
+      </main>
+      <aside>
+        <article>
+          <!--Oppsettet for article boksene, så på eksempler fra de forelesningene vi har hatt
+                https://github.com/ackarlse/webutvikling2022-->
+          <img src="images/uuvsseo.webp" alt="placeholder bilde">
+          <!--<a href="https://www.freepik.com/free-vector/gradient-benchmark-illustration_24750029.htm#page=5&query=comparison&position=49&from_view=search&track=sph">Image by pikisuperstar</a> on Freepik-->
+          <h2>UU vs SEO</h2>
+          <h3>Oktober 27, 2022</h3>
+          <p>
+            UU og SEO er to viktige metoder som er ment for å få siden din til å bli mer brukervennlig, hva kreves det... 
+          </p>
+          <a class="button-article" href="innholduuvsceo.html">Trykk her her for mer</a>
+        </article>
+        <article>
+          <img src="images/analyze.webp" alt="analyze website">
+          <!--<a href="https://www.freepik.com/free-photo/analytics-plan-strategy-insight-concept_17106787.htm#query=analyze%20website&position=4&from_view=search&track=sph">Image by rawpixel.com</a> on Freepik-->
+          <h2>Analyse</h2>
+          <h3>September 27, 2022</h3>
+          <p>
+            Nettsiden her skal bli analysert ved hjelp av verktøy. Vi skal se om SEO, UU og generelle regler blir fulgt...
+          </p>
+          <a class="button-article" href="innholdanalyse.html">Trykk her for mer</a>
+        </article>
+      </aside>
+      <section>
+        <div id="section-background"></div>
+          <h2 id="section-title">FAQ</h2>
+          <h3 id="section-undertitle">Support</h3>
+          <p id="section-p">Ikke nøl med å ta <a href=kontaktoss.html id="section-contact">kontakt <i class="fa-solid fa-arrow-up-right-from-square"></i>.</a> Det finnes ingen dumme spørsmål.</p>
+      </section>
+      <footer>
+        <div id="share-buttons">
+          <iframe title="fb share" src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fitstud.hiof.no%2F~rafaya%2FSpartech%2Finnholdcss.html&layout=button&size=large&width=77&height=28&appId" width="77" height="28" style="border:none;overflow:hidden" 
+          allowFullscreen allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+        </iframe>
+        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-url="https://itstud.hiof.no/~rafaya/Spartech/innholdcss.html" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js"></script>
+        </div>
+        <div class="container-for-services-policies-socials">
+          <!--Oppsettet for footer, alle info innenfor services, policy or socials
+             Ideen for oppsettet fikk jeg fra https://www.youtube.com/watch?v=VUydBuotmR4-->
+          <div class="services-list">
+            <h3>Services</h3>
+            <ul>
+              <li><a href="innholduuvsceo.html">UU vs SEO</a></li>
+              <li><a href="innholdcss.html">CMS</a></li>
+              <li><a href="innholdanalyse.html">Analyse</a></li>
+            </ul>
+          </div>
+          <div class="policies-list">
+            <h3>Legals</h3>
+            <ul>
+              <li><a href="#">Cookies</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Code of Conduct</a></li>
+            </ul>
+          </div>
+          <div class="socials-list">
+            <h3>Sosiale medier</h3>
+            <ul>
+              <li>
+                <a href="https://www.facebook.com/" title="Finn oss på Facebook"
+                  ><i class="fa-brands fa-square-facebook"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/"
+                  title="Finn oss på Instagram"
+                  ><i class="fa-brands fa-square-instagram"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://twitter.com/?lang=en"
+                  title="Finn oss på Twitter"
+                  ><i class="fa-brands fa-square-twitter"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/" title="Finn oss på LinkedIn"
+                  ><i class="fa-brands fa-linkedin"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!--slutt på første footer container oppsettet-->
+        <div class="container-for-contacts-copyright">
+          <!--Starten av samme oppsett som originale footer container, bar med kontakt info, copyright tekst or link under-->
+          <div class="contacts-list">
+            <h3>Kontakt</h3>
+            <ul>
+              <li>
+                <a href="tel:+4797951330"
+                  >+47 97951330 <i class="fa-solid fa-phone"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.google.com/maps/@37.7887775,-122.3963437,3a,75y,227.76h,111.29t/data=!3m6!1e1!3m4!1sBDAlqbenY21wzDuFjTjxrw!2e0!7i16384!8i8192"
+                >
+                  184 1st St, SF, CA, USA
+                  <i class="fa-solid fa-map-location"></i
+                ></a>
+              </li>
+              <li>
+                <a href="kontaktoss.html">Karriere <i class="fa-solid fa-handshake"></i></a>
+              </li>
+            </ul>
+          </div>
+          <div class="hidden-list">
+            <a href="index.html" title="Tilbake til hovedsiden"
+              ><i class="fa-solid fa-globe"></i
+            ></a>
+          </div>
+          <div class="copyright">
+            <p>
+              &copy; Akbanikov Corp. is an organization that owns the
+              copyrighted property of &copy; Spartech, &copy; Akbani Investments Inc. and &copy;
+              Raf Sauer Firearms & Defense. Copyright 2022. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!--Fikk javascriptet fra forelesningen av responive design
+      https://github.com/ackarlse/webutvikling2022-->
+    <script src="javascript/menuphone.js"></script>
+    <script
+      src="https://kit.fontawesome.com/23dce7417b.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

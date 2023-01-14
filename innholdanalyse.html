@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="nb">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="keywords" content="Analyse, Verktøy, UU, SEO">
+    <meta name="description" content="Analyser nettsiden og finn ut hva som mangles, når det gjelder fra UU, SEO, og designet. 
+     Gjør det bedre enn alle andre rivale nettsider. Bli høyt opp i lista, finn ut mer!">
+    <meta name="author" content="Rafay Akbani">
+
+    <meta property="og:url"           content="https://itstud.hiof.no/~rafaya/Spartech/innholdanalyse.html" />
+    <meta property="og:type"          content="article" />
+    <meta property="og:title"         content="Spartech.no" />
+    <meta property="og:description"   content="Her skal vi analysere siden og se på SEO, UU og andre typer evaluering..." />
+    <meta property="og:image"         content="https://itstud.hiof.no/~rafaya/Spartech/images/analyze.webp" />
+    <meta property="og:image:alt"     content="analyze website" />
+
+    <meta name="twitter:title" content="Spartech.no">
+    <meta name="twitter:card"  content="article">
+    <meta property="twitter:domain" content="itstud.hiof.no">
+    <meta property="twitter:url" content="https://itstud.hiof.no/~rafaya/Spartech/innholdanalyse.html">
+    <meta name="twitter:description" content="Her skal vi analysere siden og se på SEO, UU og andre typer evaluering...">
+    <meta name="twitter:image" content="https://itstud.hiof.no/~rafaya/Spartech/images/analyze.webp">
+
+    <link rel="stylesheet" type="text/css" href="css/innholdanalyse.css">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="images/spartech-favicon-16-16.webp">
+    <!--så på https://www.w3schools.com/html/html_favicon.asp tut om hvordan man legger til favicon-->
+    <title>Analyze Article - Spartech</title>
+  </head>
+  <body>
+    <!--Nettside header-->
+    <div id="front-page-container">
+      <!--Nettside header-->
+      <header>
+        <!--Nettsidens hovedmeny med logo over menypunktene-->
+        <nav>
+          <a href="index.html" title="Tilbake til hovedmeny">
+            <img id="logo" src="images/spartech-high-resolution-logo-color-on-transparent-background.webp" alt="spartech logo"
+          /></a>
+          <!--lagde min egen logo på https://app.logo.com/dashboard/logo_e5596280-ff68-4f74-8b9f-ebeebd1777a5/your-logo-files, var gratis-->
+          <a href="#" id="ham-icon" aria-label="hamburger icon" onclick="hamMenu()"
+            ><i class="fa-solid fa-bars"></i
+          ></a>
+          <!--javascript knappen for hamburger meny som jeg tokk fra responsive design forelesningen
+            https://github.com/ackarlse/webutvikling2022-->
+          <ul id="nav-menu" style="display: block">
+            <li>
+              <a href="index.html"><i class="fa-solid fa-house"></i> Hjem</a>
+            </li>
+            <li>
+              <a href="innholduuvsceo.html"
+                ><i class="fa-solid fa-hands-holding-circle"></i> UU vs SEO</a
+              >
+            </li>
+            <li>
+              <a href="innholdcss.html"
+                ><i class="fa-solid fa-desktop"></i> CMS</a
+              >
+            </li>
+            <li>
+              <a href="innholdanalyse.html"
+                ><i class="fa-solid fa-magnifying-glass-chart"></i> Analyse</a
+              >
+            </li>
+            <li>
+              <a href="kontaktoss.html"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i>
+                Kontakt</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="article-img"></div>
+      </header>
+      <main>
+          <ul id="breadcrumbs">
+            <li><a href="index.html">Hjem</a></li>
+            <li><a href="innholdanalyse.html">Analyse</a></li>
+          </ul>
+          <div class="article-content">
+            <h2>November 29, 2022</h2>
+            <h1>Analyse av egen side</h1>
+            <p>
+              For at siden skal følge de generelle prinsippene så må vi passe på at UU og SEO blir fulgt med, 
+              sammen med en heuristisk evaluering og PWC så kan User Experience på siden bli effektiv, bra, tålmodig og fint. 
+              Her skal vi se eksempler på problemer som kan oppstå og kan fikses ved hjelp av verktøy som Lighthouse, WAVE og andre typer verktøy.
+            </p>
+            <div class="text-line"></div>
+            <span class="title-colored">Eksempeler på resultater</span>
+            <p>
+              Ved å bruke Lighthouse verktøyet på "Hjem" siden for desktop får vi opp en evaluering på 5 kriterier; 
+              Performance, Accessibility, Best Practises, SEO og PWA på bildet nedenfor.
+            </p>
+            <img class="site-evaluation" src="images/resultdesktophome.webp"  alt="score desktop home">
+            <p>
+              Hvis vi da prøver å analysere "Hjem" siden på mobil, får vi følgende nedenfor.
+            </p>
+            <img class="site-evaluation" src="images/resultmobilehome.webp" alt="score mobile home">
+            <p>
+              Nå skal vi se eksempel på en av resultatene for UU vs SEO innholdssiden, både på desktop og mobil versjon. 
+              Starter med å analysere ved hjelp av samme verktøyet, Lighthouse. Bildet nedenfor viser frem desktop versjonen.
+            </p> 
+            <img class="site-evaluation" src="images/resultsdesktoparticle.webp" alt="score desktop article">
+            <p>
+              Og her er resultatet for mobilversjonen nedenfor.
+            </p> 
+            <img class="site-evaluation" src="images/resultmobilearticle.webp" alt="score mobile article">
+            <p>
+              Man ser litt forskjell på vurderingene for alle. 
+              Merk at vurderinger på de 5 kriteriene kan variere avhengig av hvor kjapt filer, bilder og ting laster ned på siden. 
+              Om det mangler en alt=" " tag, dårlig kontrast med tekst og bakgrunn, ikke crawlable link, ingen aria-label, osv. 
+            </p> 
+            <p>
+              Eller noen ubrukte JavaScripts, eller bilder med for høy KiB Size. Derfor er det lurt å se hva som fører til treghet. 
+              Merk at noen extensions som f.eks AdBlock kan forstyrre analyseringen.
+              Derfor er det viktig at man ser på resultatene, prøver å oppnå bra vurdering og fikse det som er mulig. 
+              Å ha grønt på alle de 5 kriteriene er ikke en stor krav, men det er nyttig å få en bra vurdering fordi hele prinsippet er å få siden din til å bli enda bedre. 
+              Tross alt, så vil man at brukere skal få en bra opplevelse på siden - det er penger vi snakker om her.
+            </p> 
+            <p>
+              Nå skal vise bruke en annen verktøy som heter WAVE, der viser det generelle UU og SEO prinsipper på siden. Vi viser frem den som er analysert for "Hjem" siden nedenfor.
+            </p> 
+            <img class="site-evaluation" src="images/webaimproblemmain.webp" alt="wave tool home checkup">
+            <p>
+              Det er sånn en vanlig oppsett av WAVE ser ut. Vi kan se det er 3 error og 8 advarsler på "Hjem" siden, 
+              som mesteparten dreier seg om; heading ikke er i en sekvens rekkefølge, mangler "form label", mangler fieldset 
+              og at 2 av "kontakt oss" linken er ved siden av hverandre.
+              Det som er error er det mest nødvendige å fikse, de med advarsler kan man velge om man vil. Det er selvom anbefalt å få 0 feil på alt uansett.
+              Bildet nedenfor viser frem det som er analysert for "Kontakt" siden.
+            </p> 
+            <img class="site-evaluation" src="images/webaimproblemcontact.webp" alt="wave tool contact checkup">
+            <p>
+              Her ser vi det er 1 error og 7 varslinger, det fleste dreier seg om manglende "alt" tekst, manglende header tekst og altfor liten skriftstørrelse. 
+              Det var også kontrast problemer, men ble fikset før bildet ble tatt.
+            </p> 
+            <div class="text-line"></div>
+            <span class="title-colored">Forbedring av performance</span>
+            <p>
+              Nå skal vi gå over feil som dukket opp under analysering av sidene. 
+              "Performance" er lurt å fiske på for å ha en god brukeropplevelse. 
+              Så lenge man er på oransje eller grønn farge av vurderingen, trenger man da ikke å bekymre seg så ille.
+              Det er lurt å prøve det beste man kan, og det man har tilgang til. 
+              Bildet nedenfor viser feilene som oppstå for alle sider, både på desktop og mobil.
+            </p>
+            <img class="site-evaluation" src="images/perfproblem.webp" alt="performance issues">
+            <p>
+              Vi ser at "Properly size image" er det som gjør at nettsiden laster inn alt tregest, deretter kommer "images in next-gen formula". 
+              "Images in next-gen formula" kan lett fikses ved å konvertere alle bilder format (PNG, JPG) til Webp format, det finnes mange gratis konverteringer. 
+            </p>
+            <p>
+              "Properly sized images" kan fikses av å legge til bilder som er riktig størrelse. 
+              Siden mange av bildene har forskjellige størrelser, så er det ikke mulig å endre på alle bildene uten at nettsiden ser dårlig ut. 
+            </p>
+            <div class="text-line"></div>
+            <span class="title-colored">Forbedring på accessibility</span>
+            <p>
+              I denne seksjonen skal vi gå gjennom alle de feilene som oppstår i "Accessibility". 
+              Vi skal se hva som hindrer en perfekt 100 vurdering. Starter med heading problemet som både Lighthouse og WAVE sier ikke er i orden.
+            </p>
+            <img class="site-evaluation" src="images/accessproblem.webp" alt="accessibility issues">
+            <p>
+              Dette ble fikset av å gjøre alle heading elementer i sekvens rekkefølge. 
+              På "Hjem" skrev jeg koden i <em>h1, h2, h3 osv,</em> i rekkefølge. 
+              Dette gjelder også for de artikkelkortene på "Hjem" siden og de andre innholdssidene inkluder "Kontakt" siden.
+              Nå som det er gjort, la oss gå over til neste problem som er kontrast på bildet under.
+            </p> 
+            <img class="site-evaluation" src="images/contrastproblem.webp" alt="contrast issues">
+            <p>
+              Denne feilen oppstår generelt på alle de artikkel sidene. 
+              Det samme feilen kom også på "Hjem" siden og "Kontakt" siden, men ble rettet på før bildet over ble tatt. 
+              Helt åpenbart så måtte bakgrunnen være mørkere en teksten, eller teksten være lysere enn bakgrunnen. En veldig lett AAA-krav.
+            </p> 
+            <p>
+              I avsnitten om resultater ble det nevnt at WAVE ble også brukt for testing og analyse. 
+              En av feilene som dukket opp var at det ikke var noe "form label" for de knappene for bilde slider. 
+              Bildet under viser koden.
+            </p> 
+            <img class="site-evaluation" src="images/emptylabel.webp" alt="form label issues">
+            <p>
+              Dette ble fikset av å lage <em>span class="hidden-text"</em> innenfor <em>label</em> tagen, 
+              deretter skrive noe ord eller tekst som vist her <em>span class="hidden-text">Carousel toggle left/span</em>. 
+              Man må også huske på å legge in verdier for å hjemme teksten, kode eksempel kan man se her; 
+              https://stackoverflow.com/questions/71369244/empty-form-label-a-form-label-is-present-but-does-not-contain-any-content. 
+            </p>
+            <p>
+              En annen feil som dukket opp var i "Kontakt" siden. WAVE verktøyet sier at Google Maps API kartet har en tom <em>alt=" "</em> tag som vist under. 
+            </p>
+            <img class="site-evaluation" src="images/mapserror.webp" alt="map issues"> 
+            <p> 
+              Problemet er at det ikke er noe tilgang til den koden der feilen oppstår siden det er en API. <em>Alt=" "</em> tag er der, men det er ikke definert.
+              Men denne feilen ødelegger ikke så mye av SEO og UU. Dette er skyldes på Google Maps API.
+            </p> 
+            <p>
+              Den siste feilen som manglet for "Accessibility" var at hamburger menyen ikke har en "discernible name" som vist på bildet nede.
+            </p> 
+            <img class="site-evaluation" src="images/discernibleproblem.webp" alt="discernible issues">
+            <p>
+              Dette ble fikset ved å bruke en tag som heter <em>aria-label=" "</em>. 
+              Tagen <em>aria-label="hamburger icon"</em> ble lagt inne <em>href="#" id="ham-icon" onclick="hamMenu()"</em> linjen.
+            </p>
+            <div class="text-line"></div>
+            <span class="title-colored">Forbedring på best practises</span>
+            <p>
+              I denne seksjonen ble det 2 feil som egentlig ikke er mulig å fikse uten at det endrer mye av siden. 
+              Vi starter på den første feilen som er "display ratio" på bildet nedenfor.
+            </p> 
+            <img class="site-evaluation" src="images/displayratio.webp" alt="display ratio issues">
+            <p>
+              Dette oppstår når størrelsen (bredden og høyden) på bildet er annerledes enn det originalet er. 
+              På grunn av hele nettsiden her bruker artikkelkort med bilder, logo på meny, og bilde som bakgrunn så kommer "display ratio" til å ikke være lik det originalet er. 
+              Hvis alle bildene fikk en definert verdi på høyde og bredde, så hadde hele siden vært rart dersom man forstørrer eller minsker skjermen. 
+              Og bildene hadde heller ikke passet på den måten siden skal være utforma.
+            </p> 
+            <p>
+              La oss ser over den andre feilen som oppstår og som ikke er mulig å fikses på. 
+              Det er nemlig "browser error" og skjer kun på "Kontakt" siden. Bildet nedenfor viser eksemplet.
+            </p>
+            <img class="site-evaluation" src="images/browsererror.webp" alt="browser issues">
+            <p>
+              Dette oppstår på grunn av at Google Maps API blir brukt på "Kontakt" siden,
+              noen ganger oppstår det en feil med serveren eller API. Denne beskjeden gis bare når det er en "console error".
+              Det eneste fiksbare metoden er å erstatte koden med noe annet, finne en annen API eller bare la det gå. 
+              Google Maps API fungerer, men det kan noenganger oppstå treig nedlastning av kartet. Så man må bare gjenopprette siden.
+            </p>
+            <div class="text-line"></div>
+            <span class="title-colored">Forbedring på SEO</span>
+            <p>
+              SEO er viktig for at Google og andre search engines skal elske deg. 
+              Her ble den bare en feil, altså "links are not crawlable" og den feilen var egentlig ganske lett å løse ut. 
+              Bildet nede viser eksemplet.
+            </p> 
+            <img class="site-evaluation" src="images/seoproblem.webp" alt="seo issues">
+            <p>
+              Koden for den feilen er; <em>a href="javascript:void(0)" id="ham-icon" aria-label="hamburger icon" onclick="hamMenu()</em>. 
+              Feilet dukket opp på grunn av at <em>javascript:void(0)</em> ikke er en link som Google kan finne frem. 
+              Den linjen betyr altså null, men Google vet ikke det. Så det måtte bli endret til <em>a href="#"</em> istedet.
+              Kode linjen blir da <em>a href="#" id="ham-icon" aria-label="hamburger icon" onclick="hamMenu()</em>.
+            </p> 
+            <div class="text-line"></div>
+            <span class="title-colored">Progressive Web App</span>
+            <p>
+              Progressive Web App (PWA) er en type moderne API som er ment for å installere innstillinger og funksjoner kjapt på siden og føre til bra opplevelse for 
+              alle brukere, hvor som helst. Det er ikke en krav om å ta med det, men det skader ikke å legge til ekstra funksjoner. 
+              Bildet nedenfor viser eksempel på PWA resultat på alle sidene.
+            </p> 
+            <img class="site-evaluation" src="images/pwaproblem.webp" alt="pwa issues">
+            <p>
+              Vi kan prøve å legge til en PWA funksjon for å gjøre brukeropplevelsen litt bedre, 
+              nemlig "apple-touch-icon" for iOS brukere. Hvis man lager en fil ikon (kan brukes favicon) og kaller det for <em>"apple-touch-icon.png"</em>. 
+              Deretter skriver vi <em>link rel="apple-touch-icon" href="images/apple-touch-icon.png"</em> inne i <em>head</em>, så kommer den ikonet for iOS brukere.
+            </p> 
+            <p>
+              De andre ekstra funksjonene kreves en "Manifest" fil, i .json format. Siden det ikke er en krav, så tenker vi ikke å gjøre det. 
+              Om man er nysgjerrig, så kan man lese mer her https://developer.chrome.com/en/docs/lighthouse/pwa/installable-manifest/.
+            </p> 
+            <div class="text-line"></div>
+            <span class="title-colored">Resultater etter forbedring</span>
+            <p>
+              Etter en lang analyserings prosess og forbedring av alle de 5 kriteriene både på desktop og mobil, så skal vi se hva Lighthouse viser oss. 
+              Merk at bildene nedenfor gjelder for hver side selv om det ble testet på "Hjem" siden. 
+              Også, merk at "Good Practices" vurdering går ned siden Facebook og Twitter del knappene ble lagt til etter alt ble forbered, de to knappene har problemer med API og scripts.
+            </p> 
+            <img class="site-evaluation" src="images/summarydesktop.webp" alt="summary desktop">
+            <p>
+              Vi ser at "SEO" og "Accessibility" fikk mest endring. Dem er på 100 vurdering som er veldig bra. 
+              Dette er god for både UU og SEO i sammenheng. La oss se evalueringen på mobil versjonen nede.
+            </p>
+            <img class="site-evaluation" src="images/summarymobile.webp" alt="summary mobile">
+            <p>
+              Samme verdi, som betyr det er fikset. Alle sidene har det samme kriterier verdi. 
+              Nå la oss se på WAVE sin evaluering på "Hjem" siden nedenfor.  
+            </p>
+            <img class="site-evaluation" src="images/summaryhome.webp" alt="summary home">
+            <p>
+              Fortsatt noen advarsler som ikke kan gjøres så mye med, men disse advarslene ødelegger ikke så mye av nettsiden. 
+              Dette konkluderer med at så lenge man analyserer siden sin, og prøver å få de beste vurderingene som er mulig. 
+              Så kan man oppnå gode resultater og gi en god brukeropplevelse. 
+            </p>
+            <div class="text-line"></div>
+            <span class="title-colored">Feil og Løsning Tabell</span>
+          </div>
+          <div class="table-list">
+            <div class="table-item"><i class="fa-solid fa-table"></i></div>
+            <div class="table-item">Feil</div>
+            <div class="table-item">Løst</div>
+            <div class="table-item">Kontrast</div>
+            <div class="table-info">Lyse blå og gul skrift i dårlig kontrast med bakgrunnen</div>
+            <div class="table-info">Endret bakgrunnen til å bli mørke grå, men beholdt skrift fargen</div>
+            <div class="table-item">Label Form</div>
+            <div class="table-info">Karusell knappene på "Hjem" siden har ingen definert navn på dem</div>
+            <div class="table-info">Skrev navn på de 3 label tag, men brukte overflow="hidden" tag på teksten</div>
+            <div class="table-item">Merkbar navn</div>
+            <div class="table-info">Hamburger menyen har ikke merkbar navn for "assistive technology"</div>
+            <div class="table-info">Lagt inn aria-label="hamburger-menu" tagen i hamburger kode linjen</div>
+            <div class="table-item">Heading</div>
+            <div class="table-info">Heading følger ikke i en sekvens rekkefølge, eks; h1, h2, h3, h4</div>
+            <div class="table-info">Endret på sekvensen av headings, også i rekkefølge sammen med artikkelkortene</div>
+            <div class="table-item">Crawlable links</div>
+            <div class="table-info">Hamburger menyen har ikke en crawlable link for Google å finne frem</div>
+            <div class="table-info">Skrev href="#" istedet for href="javascript:void(0) som er mer forståelig for Google"</div>
+            <div class="table-item">Alt=" " tag</div>
+            <div class="table-info">Manglende eller for dårlig definert alt=" " tags</div>
+            <div class="table-info">Ga bedre navn og lagt til alt=" " på bilder som manglet det</div>
+            <div class="table-item">Meta-links</div>
+            <div class="table-info">Manglet meta beskrivelse på alle sidene</div>
+            <div class="table-info">Skrev in de nødvendige meta-tags i html på alle sidene</div>
+            <div class="table-item">Bilde format</div>
+            <div class="table-info">Alle bildene i /images mappe bestå av .PNG format, noe som fører til treig nedlastning</div>
+            <div class="table-info">Konverterte alle bildene fra .PNG til .WebP format, som sparer masse plass</div>
+            <div class="table-item">Iframe title</div>
+            <div class="table-info">Manglet title=" " tag på FB deleknapp iframe</div>
+            <div class="table-info">Lagt inn title=" " tag i iframe</div>  
+          </div>
+          <div id="checklist-link">
+          <div class="text-line"></div>
+            <span class="title-colored">WCAG-Kravene</span>
+          <p>
+             Her er det en sjekkliste for de A, A og AAA-kravene som er markert med hva som er gjort eller ikke gjort for hele Spartech siden.
+             Merk at 2 AAA-krav ble lagt til i WCAG-Tilgjengelighetserklæringen. Trykk på PDF linken nedenfor.
+          </p>
+          <a href="PDF/WCAG-sjekkliste-tilgjengelighetserklæring-12.11.22.pdf">UU-tilsynet WCAG-Tilgjengelighetserklæringen Skjekkliste Mal</a>
+          </div>
+          <p id="sources">
+            Kilder: https://www.uutilsynet.no/wcag-standarden/wcag-20-standarden/86
+            https://www.w3.org/WAI/WCAG21/Understanding/no-timing.html
+            https://www.w3.org/WAI/WCAG22/Understanding/keyboard-no-exception.html
+            https://web.dev/apple-touch-icon/
+          </p>
+          <div id="return-to-main-page">
+            <a href="#">Tilbake til startsiden ^</a>
+          </div>
+        </main>
+        <aside>
+          <article>
+            <!--Oppsettet for article boksene, så på eksempler fra de forelesningene vi har hatt
+                  https://github.com/ackarlse/webutvikling2022-->
+            <img src="images/uuvsseo.webp" alt="uu versus seo">
+            <!--<a href="https://www.freepik.com/free-vector/gradient-benchmark-illustration_24750029.htm#page=5&query=comparison&position=49&from_view=search&track=sph">Image by pikisuperstar</a> on Freepik-->
+            <h2>UU vs SEO</h2>
+            <h3>Oktober 27, 2022</h3>
+            <p>
+              UU og SEO er to viktige metoder som er ment for å få siden din til å bli mer brukervennlig, hva kreves det... 
+            </p>
+            <a class="button-article" href="innholduuvsceo.html">Trykk her for mer</a>
+          </article>
+          <article>
+            <img src="images/cms.webp" alt="cms picture">
+            <!--Image by <a href="https://www.freepik.com/free-vector/flat-design-cms-transparent-screen-with-apps_11588039.htm#query=cms&position=2&from_view=search">Freepik</a>-->
+            <h2>CMS</h2>
+            <h3>Oktober 30, 2022</h3>
+            <p>
+              Det finnes mange forskjellige CMS typer. Alle av dem kan variere med funksjoner, metoder og prinsipper...
+            </p>
+            <a class="button-article" href="innholdcss.html">Trykk her for mer</a>
+          </article>
+        </aside>
+        <section>
+          <div id="section-background"></div>
+            <h2 id="section-title">FAQ</h2>
+            <h3 id="section-undertitle">Support</h3>
+            <p id="section-p">Ikke nøl med å ta <a href=kontaktoss.html id="section-contact">kontakt <i class="fa-solid fa-arrow-up-right-from-square"></i>.</a> Det finnes ingen dumme spørsmål.</p>
+        </section>
+      <footer>
+        <div id="share-buttons">
+          <iframe title="fb share" src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fitstud.hiof.no%2F~rafaya%2FSpartech%2Finnholdanalyse.html&layout=button&size=large&width=77&height=28&appId" width="77" height="28" style="border:none;overflow:hidden" 
+          allowFullscreen allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+        </iframe>
+        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-url="https://itstud.hiof.no/~rafaya/Spartech/innholdanalyse.html" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js"></script>
+        </div>
+        <div class="container-for-services-policies-socials">
+          <!--Oppsettet for footer, alle info innenfor services, policy or socials
+             Ideen for oppsettet fikk jeg fra https://www.youtube.com/watch?v=VUydBuotmR4-->
+          <div class="services-list">
+            <h3>Services</h3>
+            <ul>
+              <li><a href="innholduuvsceo.html">UU vs SEO</a></li>
+              <li><a href="innholdcss.html">CMS</a></li>
+              <li><a href="innholdanalyse.html">Analyse</a></li>
+            </ul>
+          </div>
+          <div class="policies-list">
+            <h3>Legals</h3>
+            <ul>
+              <li><a href="#">Cookies</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Code of Conduct</a></li>
+            </ul>
+          </div>
+          <div class="socials-list">
+            <h3>Sosiale medier</h3>
+            <ul>
+              <li>
+                <a href="https://www.facebook.com/" title="Finn oss på Facebook"
+                  ><i class="fa-brands fa-square-facebook"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/"
+                  title="Finn oss på Instagram"
+                  ><i class="fa-brands fa-square-instagram"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://twitter.com/?lang=en"
+                  title="Finn oss på Twitter"
+                  ><i class="fa-brands fa-square-twitter"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/" title="Finn oss på LinkedIn"
+                  ><i class="fa-brands fa-linkedin"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!--slutt på første footer container oppsettet-->
+        <div class="container-for-contacts-copyright">
+          <!--Starten av samme oppsett som originale footer container, bar med kontakt info, copyright tekst or link under-->
+          <div class="contacts-list">
+            <h3>Kontakt</h3>
+            <ul>
+              <li>
+                <a href="tel:+4797951330"
+                  >+47 97951330 <i class="fa-solid fa-phone"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.google.com/maps/@37.7887775,-122.3963437,3a,75y,227.76h,111.29t/data=!3m6!1e1!3m4!1sBDAlqbenY21wzDuFjTjxrw!2e0!7i16384!8i8192"
+                >
+                  184 1st St, SF, CA, USA
+                  <i class="fa-solid fa-map-location"></i
+                ></a>
+              </li>
+              <li>
+                <a href="kontaktoss.html">Karriere <i class="fa-solid fa-handshake"></i></a>
+              </li>
+            </ul>
+          </div>
+          <div class="hidden-list">
+            <a href="index.html" title="Tilbake til hovedsiden"
+              ><i class="fa-solid fa-globe"></i
+            ></a>
+          </div>
+          <div class="copyright">
+            <p>
+              &copy; Akbanikov Corp. is an organization that owns the
+              copyrighted property of &copy; Spartech, &copy; Akbani Investments Inc. and &copy;
+              Raf Sauer Firearms & Defense. Copyright 2022. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!--Fikk javascriptet fra forelesningen av responive design
+      https://github.com/ackarlse/webutvikling2022-->
+    <script src="javascript/menuphone.js"></script>
+    <script
+      src="https://kit.fontawesome.com/23dce7417b.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,859 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;1,100&family=Roboto:ital,wght@0,300;0,400;0,500;1,100;1,500&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  grid-area: header;
+  overflow-x: hidden;
+}
+
+#front-page-container {
+  width: 100%;
+  grid-template-areas:
+    "header"
+    "section"
+    "aside"
+    "main"
+    "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  background-color: #161616;
+}
+
+/*starten av plassering av logo, nav meny oppsett, farger osv. 
+Brukte litt av kodene fra forelesningene for å gjøre det enklere, siden den originale koden var buggy*/
+#logo {
+  width: 130px;
+  height: auto;
+  cursor: pointer;
+  display: block;
+}
+
+#nav-menu {
+  position: absolute;
+  top: 75px;
+  left: 0;
+  background-color: #161616;
+  width: 100%;
+  padding: 5rem 3rem;
+  z-index: 999;
+  border-bottom: solid 5px #41aba3;
+  text-align: center;
+}
+
+#nav-menu li {
+  list-style: none;
+}
+
+#nav-menu a {
+  color: rgb(66, 176, 167);
+  padding: 2rem 0;
+  display: inline-block;
+  font-size: 1rem;
+}
+
+nav {
+  overflow: auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header nav a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: rgb(66, 176, 167);
+  transition: all 0.2s ease;
+}
+
+header nav ul li a:hover {
+  color: rgb(103, 103, 103);
+  border-bottom: solid 3px #bda243;
+  padding-bottom: 15px;
+}
+/*slutten nav designet*/
+
+
+/* starten av header koden */
+/*så på youtube tut om hvordan man skulle legge på video animation som header, https://www.youtube.com/watch?v=y9ITxSzjZUc */
+.header-vid-background {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.header-vid-background video{
+  position: absolute;
+  width: auto;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header-background-text{
+  position: relative;
+  text-align: center;
+}
+
+.header-background-text h1{
+  color:  #eed620;
+  font-size: 4rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+.header-background-text h2{
+  color: rgb(255, 255, 255);
+  font-size: 2.5rem;
+  margin: 0.5rem;
+  font-weight: 500;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+.button-header {
+  display: inline-block;
+  padding: 1.5rem;
+  background-color: #01567496;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: rgb(255 255 255);
+  margin: 0.5rem;
+  letter-spacing: 1px;
+  border-radius: 10px;
+  text-transform: lowercase;
+  transition: all 0.2s ease-in;
+}
+
+.button-header:hover {
+  background-color: #6262629c;
+  color: #3e3e3e;
+}
+
+/*slutten til header*/
+
+section {
+  grid-area: section;
+}
+
+/*starten av koden for slider, så på youtube tut og w3 schools for å se hvordan man skulle kode den
+https://www.w3schools.com/howto/howto_js_slideshow.asp https://www.youtube.com/watch?v=0wvrlOyGlq0&t=144s*/
+.slider-container {
+  grid-area: slider;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2rem 1rem;
+  background-color: #2f2f2f;
+}
+
+.slide-style {
+  width: 100%;
+  height: 350px;
+  border: 2px #000;
+  border-style: groove;
+  border-radius: 20px;
+  background-color: #000;
+  overflow: hidden;
+  position: relative;
+}
+
+.slides {
+  width: 500%;
+  height: 350px;
+  display: flex;
+}
+
+.slides input {
+  display: none;
+}
+
+.swipe {
+  width: 20%;
+  transition: 1.8s;
+}
+
+.swipe img {
+  width: 100%;
+  height: 350px;
+}
+
+fieldset{
+  border: 0;
+}
+
+legend{
+  display: none;
+}
+
+.navigation-for-slider-auto {
+  position: absolute;
+  display: flex;
+  width: 800px;
+  margin-top: 460px;
+  justify-content: center;
+}
+
+.auto-button1 {
+  padding: 5px;
+  border-radius: 10px;
+  border: 2px solid white;
+  transition: 1s;
+}
+
+.auto-button2 {
+  padding: 5px;
+  border-radius: 10px;
+  border: 2px solid white;
+  transition: 1s;
+}
+
+.auto-button3 {
+  padding: 5px;
+  border-radius: 10px;
+  border: 2px solid white;
+  transition: 1s;
+}
+
+.navigation-for-slider-auto div:not(:last-child) {
+  margin-right: 40px;
+}
+
+#radiobtn1:checked ~ .navigation-for-slider-auto .auto-button1{
+  background: white;
+}
+
+#radiobtn2:checked ~ .navigation-for-slider-auto .auto-button2{
+  background: white;
+}
+
+#radiobtn3:checked ~ .navigation-for-slider-auto .auto-button3{
+  background: white;
+}
+
+.navigation-for-slider {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 5rem;
+}
+
+/*kunne ikke finne ut det her selv, så fant koden for å fikse det via https://stackoverflow.com/questions/71369244/empty-form-label-a-form-label-is-present-but-does-not-contain-any-content*/
+.hidden-text{
+  padding: 0;
+  margin: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); 
+  clip: rect(1px, 1px, 1px, 1px); 
+  clip-path: inset(50%);
+  overflow: hidden; 
+  white-space: nowrap; 
+}
+
+.clickable-btn {
+  background-color: rgb(66 176 167);
+  padding: 8px;
+  width: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 8px;
+}
+
+.clickable-btn:not(:last-child) {
+  margin-right: 40px;
+}
+
+.clickable-btn:hover {
+  background: rgb(120, 120, 120);
+}
+
+#radiobtn1:checked ~ .first {
+  margin-left: 0;
+}
+
+#radiobtn2:checked ~ .first {
+  margin-left: -20%;
+}
+
+#radiobtn3:checked ~ .first {
+  margin-left: -40%;
+}
+
+/*.navigation-for-slider-auto{
+
+}
+/*slutten av slider koden*/
+
+
+/*teksten som står ved siden av slider*/
+aside {
+  grid-area: sidebar;
+}
+
+.info-text {
+  background-color: #2f2f2f;
+  padding: 3rem;
+  padding-top: 1rem;
+}
+
+.info-text h3 {
+  color: rgb(66, 176, 167);
+  font-size: 2.5rem;
+}
+
+.info-text h2 {
+  color:  #eed620;
+  line-height: 1;
+  font-size: 1.4rem;
+  padding-bottom: 1rem;
+  font-weight: 500;
+}
+
+
+.info-text p {
+  color: rgb(169 169 169);
+  font-size: 1.2rem;
+  padding-top: 2rem;
+  font-weight: 400;
+}
+/*slutt på koden av teksten */
+
+
+/*starten på artikklenne, så på eksempler fra forelesningene https://github.com/ackarlse/webutvikling2022 med mine egene endringer og layout */
+main {
+  grid-area: main;
+  background: rgb(88,88,88);
+  background: linear-gradient(90deg, rgba(88,88,88,1) 0%, rgba(213,213,213,1) 45%, rgba(205,205,205,1) 55%, rgba(88,88,88,1) 100%);
+  padding: 1rem 3rem;
+}
+
+article {
+  flex-basis: 200px;
+  flex-grow: 1;
+  border: 1px solid #000000;
+  border-radius: 0 0 25px 25px;
+  background-color: #2f2f2f;
+  padding: 0;
+  margin: 4rem 0rem;
+}
+
+article h2 {
+  color: rgb(66, 176, 167);
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin: 1rem;
+  margin-bottom: 0;
+}
+
+article h3 {
+  color: #eed620;
+  font-size: 1.1rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin: 1rem;
+  margin-bottom: 0;
+}
+
+article p {
+  color: rgb(169 169 169);
+  margin: 1rem;
+  margin-bottom: 0;
+}
+
+article img {
+  width: 100%;
+  height: 300px;
+}
+
+.button-article {
+  display: block;
+    padding: 0.6rem 1.6rem;
+    border-radius: 0 0px 25px 25px;
+    background-color: #42b0a7;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    color: black;
+    margin: 1rem;
+    transition: all 0.2s ease-in;
+    text-align: center;
+}
+
+.button-article:hover {
+  background-color: #565656;
+  color: #fff;
+}
+/*slutten på artiklenne */
+
+
+/*starten av footer. Så på youtube video hvordan man skulle sette opp en spesifikk style. 
+https://www.youtube.com/watch?v=VUydBuotmR4 med min egen tekst*/
+footer {
+  grid-area: footer;
+  background-color: #161616;
+  color: #fff;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+#share-buttons{
+  padding: 3rem;
+    display: flex;
+    padding-top: 1rem;
+    padding-bottom: 5rem;
+    gap: 4rem;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-for-services-policies-socials {
+  flex-direction: column;
+}
+
+.container-for-contacts-copyright {
+  flex-direction: column;
+}
+
+.services-list {
+  flex-basis: 100%;
+  margin-top: -30px;
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.services-list h3 {
+  line-height: 3;
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 3px;
+  font-weight: 500;
+  color: rgb(66, 176, 167);
+}
+
+.services-list ul {
+  list-style-type: none;
+  line-height: 2;
+}
+
+.services-list a {
+  color: rgb(169 169 169);
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.services-list a:hover {
+  color: #de932b;
+}
+
+.policies-list {
+  flex-basis: 100%;
+  margin-top: -30px;
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.policies-list h3 {
+  line-height: 3;
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 3px;
+  font-weight: 500;
+  color: rgb(66, 176, 167);
+}
+
+.policies-list ul {
+  list-style-type: none;
+  line-height: 2;
+}
+
+.policies-list a {
+  color: rgb(169 169 169);
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.policies-list a:hover {
+  color: #de932b;
+}
+
+.socials-list {
+  flex-basis: 100%;
+  margin-top: -30px;
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.socials-list h3 {
+  line-height: 3;
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 3px;
+  font-weight: 500;
+  color: rgb(66, 176, 167);
+}
+
+.socials-list ul {
+  list-style-type: none;
+  line-height: 2;
+  display: inline-flex;
+  gap: 25px;
+}
+
+.socials-list a {
+  color: rgb(255, 255, 255);
+  transition: all 0.3s ease;
+  font-size: 50px;
+}
+
+.socials-list a:hover {
+  color: #de932b;
+}
+
+.contacts-list {
+  flex-basis: 100%;
+  margin-top: -30px;
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.contacts-list h3 {
+  line-height: 3;
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 3px;
+  font-weight: 500;
+  color: rgb(66, 176, 167);
+}
+
+.contacts-list ul {
+  list-style-type: none;
+  line-height: 2;
+  gap: 25px;
+}
+
+.contacts-list a {
+  color: rgb(169 169 169);
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.contacts-list a:hover {
+  color: #de932b;
+}
+
+.hidden-list {
+  flex-basis: 100%;
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.hidden-list a {
+  color: rgb(66, 176, 167);
+  text-decoration: none;
+  font-size: 75px;
+  transition: all 0.3s ease;
+}
+
+.hidden-list a:hover {
+  color: #de932b;
+}
+
+.copyright {
+  flex-grow: 1;
+  flex-basis: 100%;
+  font-size: 1rem;
+  color: rgb(169 169 169);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-top: 25px;
+}
+/*slutten av footer koden*/
+
+
+/* alle ikonene side verdier */
+.fa-solid.fa-house {
+  font-size: 20px;
+}
+
+.fa-solid.fa-house:hover {
+  color: rgb(151, 151, 151);
+}
+
+.fa-solid.fa-hands-holding-circle {
+  font-size: 20px;
+}
+
+.fa-solid.fa-hands-holding-circle:hover {
+  color: rgb(151, 151, 151);
+}
+
+.fa-solid.fa-desktop {
+  font-size: 20px;
+}
+
+.fa-solid.fa-desktop:hover {
+  color: rgb(151, 151, 151);
+}
+
+.fa-solid.fa-magnifying-glass-chart {
+  font-size: 20px;
+}
+
+.fa-solid.fa-magnifying-glass-chart:hover {
+  color: rgb(151, 151, 151);
+}
+
+.fa-solid.fa-arrow-up-right-from-square {
+  font-size: 20px;
+}
+
+.fa-solid.fa-arrow-up-right-from-square:hover {
+  color: rgb(151, 151, 151);
+}
+
+.fa-solid.fa-bars {
+  color: rgb(151, 151, 151);
+  font-size: 45px;
+}
+
+/*slutten av alle ikon verdier*/
+
+
+/*media queries for skjerm på min 1022px bredde, så på eksemplet fra forelesningene vi hadde. 
+ Endra også nav menyen for at logo og menypunktene skal være i samme linje, så på koder fra forelesningene som veiledning 
+ siden originale koden var en complete shit mess */
+@media only screen and (min-width: 1022px) {
+  #front-page-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "header header header"
+      "section section sidebar"
+      "main main main"
+      "footer footer footer";
+  }
+
+  header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0rem 2rem;
+  }
+
+  #nav-menu {
+    display: inline !important;
+    position: static;
+    width: fit-content;
+    border-bottom: none;
+    background: transparent;
+    padding: 0;
+  }
+
+  #nav-menu a {
+    color: rgb(66, 176, 167);
+    font-size: 1rem;
+  }
+
+  
+  #nav-menu a:hover {
+    color: rgb(103, 103, 103);
+    border-bottom: solid 3px #bda243;
+    padding-bottom: 12px;
+  }
+  
+
+  #nav-menu li {
+    display: inline-block;
+    margin: 0 3rem;
+    margin-right: 0;
+  }
+
+  #ham-icon {
+    display: none;
+  }
+
+  .slider-container {
+    grid-area: slider;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 3rem;
+    background-color: #2f2f2f;
+  }
+
+  .slide-style {
+    width: 100%;
+    height: 539px;
+    border: 2px #000;
+    border-style: groove;
+    border-radius: 20px;
+    background-color: #000;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .slides {
+    width: 500%;
+    height: 539px;
+    display: flex;
+  }
+  
+  .swipe {
+    width: 20%;
+    transition: 1.8s;
+  }
+  
+  .swipe img {
+    width: 100%;
+    height: 539px
+  }
+
+  .info-text {
+    background-color: #2f2f2f;
+    padding: 3rem;
+  }
+
+  main {
+    grid-area: main;
+    display: flex;
+    flex-wrap: wrap;
+    background: rgb(88,88,88);
+    background: linear-gradient(90deg, rgba(88,88,88,1) 0%, rgba(213,213,213,1) 45%, rgba(205,205,205,1) 55%, rgba(88,88,88,1) 100%);
+    padding: 4rem;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    justify-content: space-evenly;
+  }
+  
+  article {
+    flex-basis: 200px;
+    flex-grow: 1;
+    border: 1px solid #000000;
+    border-radius: 0 0 25px 25px;
+    background-color: #2f2f2f;
+    padding: 0;
+    margin: 0;
+    max-width: 400px;
+    display: inline-grid;
+  }
+
+  article img {
+    width: 100%;
+    height: 250px;
+  }
+
+  article:first-child{
+    margin-right: 70px;
+  }
+
+  article:last-child{
+    margin-left: 70px;
+  }
+
+  #share-buttons{
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: 5rem;
+    gap: 5rem;
+    flex-direction: unset;
+    align-items: unset;
+  }
+
+  
+
+  .container-for-services-policies-socials {
+    display: flex;
+    padding: 2rem;
+    flex-direction: initial;
+  }
+
+  .container-for-contacts-copyright {
+    display: flex;
+    padding: 2rem;
+    flex-direction: initial;
+  }
+
+  .services-list {
+    flex-basis: 100%;
+    margin-top: -30px;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .policies-list {
+    flex-basis: 100%;
+    margin-top: -30px;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .socials-list {
+    flex-basis: 100%;
+    margin-top: -30px;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .contacts-list {
+    flex-basis: 100%;
+    margin-top: -30px;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .hidden-list {
+    flex-basis: 100%;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 25px;
+  }
+}
+/*slutten av media query koden */

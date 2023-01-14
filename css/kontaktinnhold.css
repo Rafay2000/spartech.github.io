@@ -1,0 +1,774 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;1,100&family=Roboto:ital,wght@0,300;0,400;0,500;1,100;1,500&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  grid-area: header;
+}
+
+#front-page-container {
+  width: 100%;
+  grid-template-areas:
+    "header"
+    "main"
+    "section"
+    "aside"
+    "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  background-color: #161616;
+}
+
+/*starten av plassering av logo, nav meny oppsett, farger osv. 
+Brukte litt av kodene fra forelesningene for å gjøre det enklere, siden den originale koden var buggy*/
+#logo {
+  width: 130px;
+  height: auto;
+  cursor: pointer;
+  display: block;
+}
+
+#nav-menu {
+  position: absolute;
+  top: 75px;
+  left: 0;
+  background-color: #161616;
+  width: 100%;
+  padding: 5rem 3rem;
+  z-index: 999;
+  border-bottom: solid 5px #41aba3;
+  text-align: center;
+}
+
+#nav-menu li {
+  list-style: none;
+}
+
+#nav-menu a {
+  color: rgb(66, 176, 167);
+  padding: 2rem 0;
+  display: inline-block;
+  font-size: 1rem;
+}
+
+nav {
+  overflow: auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header nav a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: rgb(66, 176, 167);
+  transition: all 0.2s ease;
+}
+
+header nav ul li a:hover {
+  color: rgb(103, 103, 103);
+  border-bottom: solid 3px #bda243;
+  padding-bottom: 15px;
+}
+/*slutten nav designet*/
+
+.contacts-main-img{
+  background-image: url(../images/many_idiots_talking.webp);
+  background-position: center;
+  background-size: cover;
+  height: 50vh;
+  width: 100%;
+}
+
+.contacts-img-overhead-text{
+    text-align: center;
+    position: relative;
+    padding: 5rem;
+    height: 50vh;
+    background-color: #01567496;
+}
+
+.contacts-img-overhead-text h1{
+    font-size: 3rem;
+    color: white;
+    font-weight: 500;
+}
+
+.contacts-img-overhead-text h2{
+    font-size: 1.7rem;
+    color: white;
+    font-weight: 500;
+}
+
+main {
+  grid-area: main;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: center;
+  background: rgba(47,47,47,1);
+}
+
+/**starten av kontakt greie med de to boksene, fikk inspirasjon fra https://www.hubspot.com/company/contact?hubs_post=blog.hubspot.com%2Fwebsite%2Fhtml-space&hubs_post-cta=redirect-link
+så en del av koden hvordan dem gjorde det via inspetc element, men lagde det etter min stil**/
+#contacts-page-container{
+    top: -100px;
+    position: relative;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.contacts-content {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 3rem;
+    background-color: rgba(47,47,47,1);
+    border: 2px solid #3a3a3a;
+    margin: 3rem 0;
+    margin-top: 0;
+}
+
+.contacts-content h2{
+    color: #42b0a7;
+    padding-bottom: 2rem;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.contacts-content p{
+    color: white;
+    padding-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.line{
+    border-top: solid 1px  white;
+    padding: 1rem;
+    width: 100%;
+}
+
+.support-button{
+    padding: 1rem;
+    background-color: #42b0a7;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: rgb(0 0 0);
+    border-radius: 5px;
+    transition: all 0.2s ease-in;
+    font-weight: 500;
+    margin-top: 2rem;
+}
+
+.support-button:hover{
+    background-color: #626262;
+    color: #3e3e3e;
+}
+
+.phone{
+    color:   #42b0a7;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    text-decoration: none;
+}
+
+
+section {
+    grid-area: section;
+    background: rgba(47,47,47,1);
+    padding: 3rem;
+    padding-top: 4rem;
+    padding-bottom: 0;
+  }
+
+section h3{
+  font-size: 2.3rem;
+  color:  #42b0a7;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 7rem;
+  letter-spacing: 1px;
+}
+
+#map{
+  height: 474px;
+  border: solid 2px rgb(0, 0, 0);
+  border-radius: 8px;
+}
+
+.location-text{
+  letter-spacing: 1px;
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+.location-text h4{
+  text-transform: uppercase;
+  color: #eed620;
+  font-size: 1.2rem;
+  padding-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.location-text h5{
+  text-transform: uppercase;
+  color: #eed620;
+  font-size: 1.2rem;
+  padding-bottom: 1rem;
+  font-weight: 500;
+}
+
+.location-text h6{
+  color: white;
+  font-size: 1rem;
+  padding-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+.location-text p{
+  color: white;
+  font-size: 1rem;
+  padding-bottom: 2rem;
+  font-weight: 400;
+}
+  
+.contact-form{
+  width: 100%;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 8px;
+  box-sizing: border-box;
+  margin-top: 8px;
+  margin-bottom: 1.2rem;
+  resize: vertical;
+  background-color: rgba(47,47,47,1);
+  color: white;
+  font-size: 1rem
+}
+
+input[type=submit] {
+  background-color:   #42b0a7;
+  color: rgb(0, 0, 0);
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+input[type=send]:hover {
+  background-color: #848484;
+}
+   
+  aside{
+    grid-area: aside;
+    background: rgba(47,47,47,1);
+    padding-top: 10rem;
+  }
+
+#career-image-overhead{
+  background-image: url(../images/businessman.webp);
+  /**<a href="https://www.freepik.com/free-photo/rear-view-businessman-talking-phone-city_17848524.htm#query=career&position=22&from_view=search&track=sph">Image by rawpixel.com</a> on Freepik**/
+  background-position: center;
+  background-size: cover;
+  height: 20vh;
+  width: 100%;
+}
+
+.career-text-over-image{
+  text-align: center;
+  position: relative;
+  height: 20vh;
+  background-color: #00000085;
+  padding-top: 4.3rem;
+}
+
+.career-text-over-image h3{
+  font-size: 2.3rem;
+  color: #42b0a7;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.career-positions{
+  background: rgb(88,88,88);
+  background: linear-gradient(90deg, rgba(88,88,88,1) 0%, rgba(213,213,213,1) 45%, rgba(205,205,205,1) 55%, rgba(88,88,88,1) 100%);
+  padding-top: 9rem;
+}
+
+.career-positions h4{
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 500;
+
+}
+
+.career-positions p{
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding-bottom: 9rem;
+}
+
+.open-application{
+  display: grid;
+  justify-items: center;
+  background-color: #0b263c;
+
+}
+
+.open-application p{
+  color: white;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 400;
+  padding-bottom: 0;
+  margin-top: 1rem;
+}
+
+.application-btn{
+  padding: 0.4rem 1.5rem;
+  background-color: #42b0a7;
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: rgb(0 0 0);
+  border-radius: 5px;
+  transition: all 0.2s ease-in;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+
+
+footer {
+  grid-area: footer;
+  background-color: #161616;
+  color: #fff;
+  padding: 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+#share-buttons{
+  padding: 3rem;
+    display: flex;
+    padding-top: 1rem;
+    padding-bottom: 5rem;
+    gap: 4rem;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-for-services-policies-socials {
+  flex-direction: column;
+}
+
+.container-for-contacts-copyright {
+  flex-direction: column;
+}
+
+.services-list {
+  flex-basis: 100%;
+  margin-top: -30px;
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.services-list h3 {
+  line-height: 3;
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 3px;
+  font-weight: 500;
+  color: rgb(66, 176, 167);
+}
+
+.services-list ul {
+  list-style-type: none;
+  line-height: 2;
+}
+
+.services-list a {
+  color: rgb(169 169 169);
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.services-list a:hover {
+  color: #de932b;
+}
+
+.policies-list {
+  flex-basis: 100%;
+  margin-top: -30px;
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.policies-list h3 {
+  line-height: 3;
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 3px;
+  font-weight: 500;
+  color: rgb(66, 176, 167);
+}
+
+.policies-list ul {
+  list-style-type: none;
+  line-height: 2;
+}
+
+.policies-list a {
+  color: rgb(169 169 169);
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.policies-list a:hover {
+  color: #de932b;
+}
+
+.socials-list {
+  flex-basis: 100%;
+  margin-top: -30px;
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.socials-list h3 {
+  line-height: 3;
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 3px;
+  font-weight: 500;
+  color: rgb(66, 176, 167);
+}
+
+.socials-list ul {
+  list-style-type: none;
+  line-height: 2;
+  display: inline-flex;
+  gap: 25px;
+}
+
+.socials-list a {
+  color: rgb(255, 255, 255);
+  transition: all 0.3s ease;
+  font-size: 50px;
+}
+
+.socials-list a:hover {
+  color: #de932b;
+}
+
+.contacts-list {
+  flex-basis: 100%;
+  margin-top: -30px;
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.contacts-list h3 {
+  line-height: 3;
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 3px;
+  font-weight: 500;
+  color: rgb(66, 176, 167);
+}
+
+.contacts-list ul {
+  list-style-type: none;
+  line-height: 2;
+  gap: 25px;
+}
+
+.contacts-list a {
+  color: rgb(169 169 169);
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.contacts-list a:hover {
+  color: #de932b;
+}
+
+.hidden-list {
+  flex-basis: 100%;
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.hidden-list a {
+  color: rgb(66, 176, 167);
+  text-decoration: none;
+  font-size: 75px;
+  transition: all 0.3s ease;
+}
+
+.hidden-list a:hover {
+  color: #de932b;
+}
+
+.copyright {
+  flex-grow: 1;
+  flex-basis: 100%;
+  font-size: 1rem;
+  color: rgb(169 169 169);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-top: 25px;
+}
+
+/* alle ikonene side verdier */
+
+.fa-solid.fa-house {
+  font-size: 20px;
+}
+
+.fa-solid.fa-house:hover {
+  color: rgb(151, 151, 151);
+}
+
+.fa-solid.fa-hands-holding-circle {
+  font-size: 20px;
+}
+
+.fa-solid.fa-hands-holding-circle:hover {
+  color: rgb(151, 151, 151);
+}
+
+.fa-solid.fa-desktop {
+  font-size: 20px;
+}
+
+.fa-solid.fa-desktop:hover {
+  color: rgb(151, 151, 151);
+}
+
+.fa-solid.fa-magnifying-glass-chart {
+  font-size: 20px;
+}
+
+.fa-solid.fa-magnifying-glass-chart:hover {
+  color: rgb(151, 151, 151);
+}
+
+.fa-solid.fa-arrow-up-right-from-square {
+  font-size: 20px;
+}
+
+.fa-solid.fa-arrow-up-right-from-square:hover {
+  color: rgb(151, 151, 151);
+}
+
+.fa-solid.fa-bars {
+  color: rgb(151, 151, 151);
+  font-size: 45px;
+}
+
+.fa-solid.fa-square-phone {
+  color: #eed620;
+  font-size: 50px;
+  padding-bottom: 2rem;
+}
+
+.fa-solid.fa-comments {
+  color: #eed620;
+  font-size: 50px;
+  padding-bottom: 2rem;
+}
+
+
+/*media queries for smallere skjerm bredde, så på eksemplet fra forelesningene vi hadde */
+
+@media only screen and (min-width: 1022px) {
+  #front-page-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+      "header header header"
+      "main main main"
+      "section section section"
+      "aside aside aside"
+      "footer footer footer";
+
+  }
+
+  header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0rem 2rem;
+  }
+
+  #nav-menu {
+    display: inline !important;
+    position: static;
+    width: fit-content;
+    border-bottom: none;
+    background: transparent;
+    padding: 0;
+  }
+
+  #nav-menu a {
+    color: rgb(66, 176, 167);
+    font-size: 1rem;
+  }
+
+  
+  #nav-menu a:hover {
+    color: rgb(103, 103, 103);
+    border-bottom: solid 3px #bda243;
+    padding-bottom: 12px;
+  }
+  
+
+  #nav-menu li {
+    display: inline-block;
+    margin: 0 3rem;
+    margin-right: 0;
+  }
+
+
+  #ham-icon {
+    display: none;
+  }
+
+  #contacts-page-container{
+    display: flex;
+    top: -100px;
+    position: relative;
+    max-width: 970px;
+    margin: 0;
+}
+
+.contacts-content {
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 3rem;
+  background-color: rgba(47,47,47,1);
+  border: 2px solid #3a3a3a;
+  margin: 0;
+}
+
+.contacts-content:first-child{
+  margin-right: 50px;
+}
+
+#map-form-container{
+  display: flex;
+}
+
+.location-text:first-child{
+  margin-right: 60px;
+}
+
+.location-text{
+  letter-spacing: 1px;
+  width: 50%;
+}
+
+.contact-form{
+  width: 50%;
+}
+
+#share-buttons{
+  padding: 3rem;
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+  padding-bottom: 5rem;
+  gap: 5rem;
+  flex-direction: unset;
+  align-items: unset;
+}
+
+
+  .container-for-services-policies-socials {
+    display: flex;
+    padding: 2rem;
+    flex-direction: initial;
+  }
+
+  .container-for-contacts-copyright {
+    display: flex;
+    padding: 2rem;
+    flex-direction: initial;
+  }
+
+  .services-list {
+    flex-basis: 100%;
+    margin-top: -30px;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .policies-list {
+    flex-basis: 100%;
+    margin-top: -30px;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .socials-list {
+    flex-basis: 100%;
+    margin-top: -30px;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .contacts-list {
+    flex-basis: 100%;
+    margin-top: -30px;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .hidden-list {
+    flex-basis: 100%;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 25px;
+  }
+
+ 
+}

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="nb">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="keywords" content="Kontakt, Hjelp, Spartech">
+    <meta name="description" content="Kontakt oss hvis du eller din bedrift lurer på noe. 
+     Vi hjelper deg med alt, og vi vil sikre på at du får den løsningen du trenger">
+    <meta name="author" content="Rafay Akbani">
+
+    <meta property="og:url"           content="https://itstud.hiof.no/~rafaya/Spartech/kontaktoss.html" />
+    <meta property="og:type"          content="contact" />
+    <meta property="og:title"         content="Spartech.no" />
+    <meta property="og:description"   content="Kontakt os om du lurer på noe. Spartech er villig til å hjelpe!" />
+    <meta property="og:image"         content="https://itstud.hiof.no/~rafaya/Spartech/images/many_idiots_talking.webp" />
+    <meta property="og:image:alt"     content="contact us" />
+
+    <meta name="twitter:title" content="Spartech.no">
+    <meta name="twitter:card"  content="contact">
+    <meta property="twitter:domain" content="itstud.hiof.no">
+    <meta property="twitter:url" content="https://itstud.hiof.no/~rafaya/Spartech/kontaktoss.html">
+    <meta name="twitter:description" content="Kontakt os om du lurer på noe. Spartech er villig til å hjelpe!">
+    <meta name="twitter:image" content="https://itstud.hiof.no/~rafaya/Spartech/images/many_idiots_talking.webp">
+
+    <link rel="stylesheet" type="text/css" href="css/kontaktinnhold.css">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="images/spartech-favicon-16-16.webp">
+    <!--så på https://www.w3schools.com/html/html_favicon.asp tut om hvordan man legger til favicon-->
+    <title>Contact Page - Spartech</title>
+
+    <script type="module" src="javascript/map.js"></script>
+  </head>
+  <body>
+    <!--Nettside header-->
+    <div id="front-page-container">
+      <!--Nettside header-->
+      <header>
+        <!--Nettsidens hovedmeny med logo over menypunktene-->
+        <nav>
+          <a href="index.html" title="Tilbake til hovedmeny">
+            <img id="logo" src="images/spartech-high-resolution-logo-color-on-transparent-background.webp" alt="spartech logo"
+          /></a>
+          <!--lagde min egen logo på https://app.logo.com/dashboard/logo_e5596280-ff68-4f74-8b9f-ebeebd1777a5/your-logo-files, var gratis-->
+          <a href="#" id="ham-icon" aria-label="hamburger icon" onclick="hamMenu()"
+            ><i class="fa-solid fa-bars"></i
+          ></a>
+          <!--javascript knappen for hamburger meny som jeg tokk fra responsive design forelesningen
+            https://github.com/ackarlse/webutvikling2022-->
+          <ul id="nav-menu" style="display: block">
+            <li>
+              <a href="index.html"><i class="fa-solid fa-house"></i> Hjem</a>
+            </li>
+            <li>
+              <a href="innholduuvsceo.html"
+                ><i class="fa-solid fa-hands-holding-circle"></i> UU vs SEO</a
+              >
+            </li>
+            <li>
+              <a href="innholdcss.html"
+                ><i class="fa-solid fa-desktop"></i> CMS</a
+              >
+            </li>
+            <li>
+              <a href="innholdanalyse.html"
+                ><i class="fa-solid fa-magnifying-glass-chart"></i> Analyse</a
+              >
+            </li>
+            <li>
+              <a href="kontaktoss.html"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i>
+                Kontakt</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="contacts-main-img">
+           <div class="contacts-img-overhead-text">
+             <h1>Lurer På Noe?</h1>
+             <h2>Vi vil gjerne høre fra deg...</h2>
+           </div>
+        </div>
+      </header>
+      <main>
+        <div id="contacts-page-container">
+          <div class="contacts-content">
+            <!--fikk inspirasjon for layouten via https://www.hubspot.com/company/contact?hubs_post=blog.hubspot.com%2Fwebsite%2Fhtml-space&hubs_post-cta=redirect-link
+                så på koden demmes hvordan dem gjorde designet, uten å kopiere alt-->
+            <h2>Snakk På Telefon</h2>
+            <div class="line"></div>
+            <i class="fa-solid fa-square-phone"></i>
+            <div class="line"></div>
+            <p>Snakk med en av våre erfarne medarbeidere, eller bare ha en uforpliktene prat. Ikke stress med å ringe oss.</p>
+            <p>Åpningstider: Mandag til Fredag kl. 0800-1600 og Lørdag kl. 0900-1400.</p>
+            <a class="phone" href="tel:+4797951330">+4797951330 for San Francisco</a>
+            <a class="phone" href="tel:+4769608000">+4769608000 for Halden</a>
+          </div>
+          <div class="contacts-content">
+            <h2>Snakk Med Support</h2>
+            <div class="line"></div>
+            <i class="fa-solid fa-comments"></i>
+            <div class="line"></div>
+            <p>Ikke nøl med å stille spørsmål, vi hjelper deg med det du spør etter. En medarbeider kommer og hjelper som fort som mulig</p>
+            <p>Åpningstider: Mandag til Fredag kl. 0800-1800 og Lørdag kl. 1000-1600.</p>
+            <a class="support-button" href="#">Kontakt Support</a>
+          </div>
+        </div>
+      </main>
+      <section>
+        <h3>Kart og sjema</h3>
+        <div id="map-form-container">
+          <div class="location-text">
+            <h4>184 1st St, San Francisco</h4>
+            <h5>California, United States</h5>
+            <h6>Åpent: 0800-1600 PST Man-Fre</h6>
+            <p>Og 0900-1300 PST Lørdag</p>
+            <!--Tokk API tut fra https://developers.google.com/maps/documentation/javascript/adding-a-google-map#maps_add_map-html-->
+            <div id="map"></div>
+           </div>
+           <!--Så på eksemplet for skjema fra https://www.w3schools.com/howto/howto_css_contact_form.asp-->
+          <div class="contact-form">
+            <form action="/action_page.php">
+              <label for="first-name" style="font-size: 1.1rem; color: #eed620; font-weight: 500">Navn:*</label>
+              <input type="text" id="first-name" name="firstname" placeholder="Skriv inn navnet ditt...">
+              <label for="phone" style="font-size: 1.1rem; color: #eed620; font-weight: 500">Telefon:*</label>
+              <input type="text" id="phone" name="phonenumber" placeholder="Skriv inn tlf. nummeret ditt...">
+              <label for="email" style="font-size: 1.1rem; color: #eed620; font-weight: 500">E-post:*</label>
+              <input type="text" id="email" name="emailname" placeholder="Skriv inn e-posten ditt...">
+              <label for="issues" style="font-size: 1.1rem; color: #eed620; font-weight: 500">Hva er spørsmålet?*</label>
+              <select id="issues" name="questions">
+                <option value="help">Generell hjelp med nettsiden</option>
+                <option value="seo">Hjelp med Search Engine Optimization</option>
+                <option value="uu">Hjelp med Universell Utforming</option>
+                <option value="server">Hjelp med serveren</option>
+                <option value="agency">Hjelp med bemanning</option>
+                <option value="other">Annet...</option>
+              </select>
+              <label for="subject-text" style="font-size: 1.1rem; color: #eed620;">Tema:</label>
+              <textarea id="subject-text" name="subject" placeholder="Skriv noe her..." style="height: 150px"></textarea>
+              <input type="submit" value="Send">
+            </form>
+          </div>
+        </div>
+      </section>
+      <aside>
+        <div id="career-image-overhead">
+        <div class="career-text-over-image">
+          <h3>Karriere</h3>
+        </div>
+        </div>
+        <div class="career-positions">
+          <h4>Desverre er det ingen ledige stillinger for nå.</h4>
+          <p>Vi legger ut alltid ny stillinger når det er behov.</p>
+          <div class="open-application">
+            <p>Du er hjertelig velkommen til å sende oss en åpen søknad.</p>
+            <a class="application-btn" href="#">Send oss en åpen søknad</a>
+          </div>
+        </div>
+        
+      </aside>
+      <footer>
+        <div id="share-buttons">
+        <iframe title="fb share" src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fitstud.hiof.no%2F~rafaya%2FSpartech%2Fkontaktoss.html&layout=button&size=large&width=77&height=28&appId" width="77" height="28" style="border:none;overflow:hidden" 
+        allowFullscreen allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-url="https://itstud.hiof.no/~rafaya/Spartech/kontaktoss.html" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js"></script>
+        </div>
+        <div class="container-for-services-policies-socials">
+          <!--Oppsettet for footer, alle info innenfor services, policy or socials
+             Ideen for oppsettet fikk jeg fra https://www.youtube.com/watch?v=VUydBuotmR4-->
+          <div class="services-list">
+            <h3>Services</h3>
+            <ul>
+              <li><a href="innholduuvsceo.html">UU vs SEO</a></li>
+              <li><a href="innholdcss.html">CMS</a></li>
+              <li><a href="innholdanalyse.html">Analyse</a></li>
+            </ul>
+          </div>
+          <div class="policies-list">
+            <h3>Legals</h3>
+            <ul>
+              <li><a href="#">Cookies</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Code of Conduct</a></li>
+            </ul>
+          </div>
+          <div class="socials-list">
+            <h3>Sosiale medier</h3>
+            <ul>
+              <li>
+                <a href="https://www.facebook.com/" title="Finn oss på Facebook"
+                  ><i class="fa-brands fa-square-facebook"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/"
+                  title="Finn oss på Instagram"
+                  ><i class="fa-brands fa-square-instagram"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://twitter.com/?lang=en"
+                  title="Finn oss på Twitter"
+                  ><i class="fa-brands fa-square-twitter"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/" title="Finn oss på LinkedIn"
+                  ><i class="fa-brands fa-linkedin"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!--slutt på første footer container oppsettet-->
+        <div class="container-for-contacts-copyright">
+          <!--Starten av samme oppsett som originale footer container, bar med kontakt info, copyright tekst or link under-->
+          <div class="contacts-list">
+            <h3>Kontakt</h3>
+            <ul>
+              <li>
+                <a href="tel:+4797951330"
+                  >+47 97951330 <i class="fa-solid fa-phone"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.google.com/maps/@37.7887775,-122.3963437,3a,75y,227.76h,111.29t/data=!3m6!1e1!3m4!1sBDAlqbenY21wzDuFjTjxrw!2e0!7i16384!8i8192"
+                >
+                  184 1st St, SF, CA, USA
+                  <i class="fa-solid fa-map-location"></i
+                ></a>
+              </li>
+              <li>
+                <a href="kontaktoss.html">Karriere <i class="fa-solid fa-handshake"></i></a>
+              </li>
+            </ul>
+          </div>
+          <div class="hidden-list">
+            <a href="index.html" title="Tilbake til hovedsiden"
+              ><i class="fa-solid fa-globe"></i
+            ></a>
+          </div>
+          <div class="copyright">
+            <p>
+              &copy; Akbanikov Corp. is an organization that owns the
+              copyrighted property of &copy; Spartech, &copy; Akbani Investments Inc. and &copy;
+              Raf Sauer Firearms & Defense. Copyright 2022. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!--Fikk javascriptet fra forelesningen av responive design
+      https://github.com/ackarlse/webutvikling2022-->
+    <script src="javascript/menuphone.js"></script>
+    <script
+      src="https://kit.fontawesome.com/23dce7417b.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--Scriptet for Google Maps fra https://developers.google.com/maps/documentation/javascript/adding-a-google-map#maps_add_map-javascript-->
+    <script  
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwplFFaGgkOVM5FzqTHEVPP1k7_mcrUgc&callback=initMap" defer>
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default" defer></script>
+  </body>
+</html>

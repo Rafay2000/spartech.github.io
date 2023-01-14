@@ -1,0 +1,894 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;1,100&family=Roboto:ital,wght@0,300;0,400;0,500;1,100;1,500&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  grid-area: header;
+}
+
+#front-page-container {
+  width: 100%;
+  grid-template-areas:
+    "header"
+    "main"
+    "aside"
+    "section"
+    "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  background-color: #161616;
+}
+
+/*starten av plassering av logo, nav meny oppsett, farger osv. 
+Brukte litt av kodene fra forelesningene for å gjøre det enklere, siden den originale koden var buggy*/
+#logo {
+    width: 130px;
+    height: auto;
+    cursor: pointer;
+    display: block;
+  }
+  
+  #nav-menu {
+    position: absolute;
+    top: 75px;
+    left: 0;
+    background-color: #161616;
+    width: 100%;
+    padding: 5rem 3rem;
+    z-index: 999;
+    border-bottom: solid 5px #41aba3;
+    text-align: center;
+  }
+  
+  #nav-menu li {
+    list-style: none;
+  }
+  
+  #nav-menu a {
+    color: rgb(66, 176, 167);
+    padding: 2rem 0;
+    display: inline-block;
+    font-size: 1rem;
+  }
+  
+  nav {
+    overflow: auto;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  header nav a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: rgb(66, 176, 167);
+    transition: all 0.2s ease;
+  }
+  
+  header nav ul li a:hover {
+    color: rgb(103, 103, 103);
+    border-bottom: solid 3px #bda243;
+    padding-bottom: 15px;
+  }
+  /*slutten nav designet*/
+
+
+/*starten av koden for support og faq layouten ved siden av artikklene*/
+section {
+  grid-area: section;
+  flex-wrap: wrap;
+  background: rgb(47 47 47);
+}
+
+#section-background{
+ background-image: url(../images/callcenter.webp);
+ /**<a href="https://www.freepik.com/free-photo/no-people-desk-with-multiple-computers-call-center-office-used-by-telemarketing-agents-answer-phone-calls-helpline-empty-space-with-technology-give-assistance-customer-care_25700442.htm#page=4&query=contact&position=9&from_view=search&track=sph">Image by DCStudio</a> on Freepik**/
+ background-position: center;
+ background-size: cover;
+ object-fit: contain;
+ height: 300px;
+}
+
+#section-title{
+  padding: 3rem;
+    padding-bottom: 0;
+    padding-top: 2rem;
+    font-size: 2.8rem;
+    letter-spacing: 5px;
+    -webkit-text-stroke: 1px rgb(169 169 169);
+    font-weight: 500;
+    color: transparent;
+}
+
+
+#section-undertitle{
+  padding: 3rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0rem;
+    padding-left: 5rem;
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgb(169 169 169);
+    font-weight: 500;   
+}
+
+
+#section-p{
+  padding: 3rem;
+    padding-top: 2rem;
+    font-size: 1.4rem;
+    padding-bottom: 2rem;
+    color: rgb(169 169 169);
+}
+
+#section-contact{
+  text-decoration: none;
+  color:  rgb(66, 176, 167);
+  transition: all 0.2s ease;
+}
+
+#section-contact:hover{
+  text-decoration: underline;
+  color:   #727272;
+}
+/*slutten av den faq, support blokk med koder*/
+
+
+/*starten av koder for de 2 artikkelboksene under selve artikkel teksten, står ved sidden av faq og support blokken*/
+aside{
+    grid-area: aside;
+    flex-wrap: wrap;
+    background: rgb(88,88,88);
+    background: linear-gradient(90deg, rgba(88,88,88,1) 0%, rgba(213,213,213,1) 45%, rgba(205,205,205,1) 55%, rgba(88,88,88,1) 100%);
+    padding: 1rem 3rem;
+  }
+
+article {
+  flex-basis: 200px;
+  flex-grow: 1;
+  border: 1px solid #000000;
+  border-radius: 0 0 25px 25px;
+  background-color: #2f2f2f;
+  margin: 4rem 0rem;
+}
+
+article h2 {
+  color: rgb(66, 176, 167);
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin: 1rem;
+  margin-bottom: 0;
+}
+
+article h3 {
+  color: #eed620;
+  font-size: 1.1rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin: 1rem;
+  margin-bottom: 0;
+}
+
+article p {
+  color: rgb(169 169 169);
+  margin: 1rem;
+  margin-bottom: 0;
+}
+
+article img {
+  width: 100%;
+  height: 300px;
+}
+
+.button-article {
+  display: block;
+    padding: 0.6rem 1.6rem;
+    border-radius: 0 0px 25px 25px;
+    background-color: #42b0a7;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    color: black;
+    margin: 1rem;
+    transition: all 0.2s ease-in;
+    text-align: center;
+}
+
+.button-article:hover {
+  background-color: #565656;
+  color: #fff;
+}
+
+
+/* starten av informasjon og koder som er i artikkelen */
+main {
+  grid-area: main;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 1rem;
+  background: rgba(47,47,47,1);
+  justify-content: center;
+  
+}
+
+.article-content {
+  width: 100%;
+  padding: 2rem;
+  margin: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  display: grid;
+}
+
+
+#article-img {
+  background-image: url(../images/cms.webp);
+  background-position: center;
+  background-size: cover;
+  height: 50vh;
+  width: 100%;
+}
+
+.article-content h1{
+  font-size: 2.5rem;
+  padding-bottom: 2rem;
+  color: rgb(66, 176, 167);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.article-content h2{
+  font-size: 1.4rem;
+  padding-bottom: 2rem;
+  color:  #eed620;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.article-content p{
+  font-size: 1.1rem;
+  padding-bottom: 2rem;
+  color: #fff;
+  line-height: 1.3;
+}
+
+.text-line{
+  border-top: solid 1px #fff;
+  padding: 1rem;
+}
+
+.title-colored{
+  padding-bottom: 2rem;
+  font-size: 1.6rem;
+  color: rgb(66, 176, 167);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/**Så på eksempler fra w3 school hvordan man lager tabell, https://www.w3schools.com/css/css_grid.asp **/
+.table-list{
+    width: 100%;
+      display: grid;
+      grid-template-columns: 0fr 1fr 1fr 1fr;
+      padding: 2rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      overflow-x: scroll;
+      height: auto;
+  }
+
+.table-item {
+  background-color:  rgb(49 79 112);
+  border: 2px solid #2f2f2f;
+  color: rgb(255, 255, 255);
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.table-info {
+  background-color: rgb(229 229 229 / 80%);
+  border: 2px solid #2f2f2f;
+  color: rgb(0, 0, 0);
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+/** slutt på tabell **/
+
+#sources {
+  padding: 2rem 2rem;
+  color: rgb(169 169 169);
+  width: 100%;
+  overflow-x: auto;
+}
+
+#return-to-main-page{
+  padding: 2rem 2rem;
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+}
+
+#return-to-main-page a{
+  text-decoration: none;
+    font-size: 1.3rem;
+    display: block;
+    padding: 0.5rem 2rem;
+    border-radius: 3px 3px 3px 3px;
+    background-color: #c0c0c0;
+    font-weight: 500;
+    color: black;
+    transition: all 0.1s ease;
+    text-align: center;
+    width: 60%;
+}
+
+#return-to-main-page a:hover{
+  background-color: #565656;
+  color: rgb(255, 255, 255);
+}
+
+
+/*la til bredcrumbs fra forelesningene*/
+#breadcrumbs {
+  padding: 2rem;
+  margin: 0;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  width: 100%;
+}
+
+#breadcrumbs li {
+  display: inline;
+}
+
+#breadcrumbs li a {
+  color:  rgb(169 169 169);
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+#breadcrumbs li::after {
+  content: "/";
+  color:  rgb(169 169 169);
+  margin: 0 1.2rem;
+}
+
+#breadcrumbs li:last-child:after {
+  content: "";
+  margin: 0 1.2rem;
+}
+#breadcrumbs li:last-child {
+  font-weight: 800;
+}
+/*slutten av artikkel med info*/
+
+footer {
+  grid-area: footer;
+  background-color: #161616;
+  color: #fff;
+  padding: 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+#share-buttons{
+  padding: 3rem;
+    display: flex;
+    padding-top: 1rem;
+    padding-bottom: 5rem;
+    gap: 4rem;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-for-services-policies-socials {
+    flex-direction: column;
+  }
+  
+  .container-for-contacts-copyright {
+    flex-direction: column;
+  }
+  
+  .services-list {
+    flex-basis: 100%;
+    margin-top: -30px;
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  .services-list h3 {
+    line-height: 3;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 3px;
+    font-weight: 500;
+    color: rgb(66, 176, 167);
+  }
+  
+  .services-list ul {
+    list-style-type: none;
+    line-height: 2;
+  }
+  
+  .services-list a {
+    color: rgb(169 169 169);
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.3s ease;
+  }
+  
+  .services-list a:hover {
+    color: #de932b;
+  }
+  
+  .policies-list {
+    flex-basis: 100%;
+    margin-top: -30px;
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  .policies-list h3 {
+    line-height: 3;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 3px;
+    font-weight: 500;
+    color: rgb(66, 176, 167);
+  }
+  
+  .policies-list ul {
+    list-style-type: none;
+    line-height: 2;
+  }
+  
+  .policies-list a {
+    color: rgb(169 169 169);
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.3s ease;
+  }
+  
+  .policies-list a:hover {
+    color: #de932b;
+  }
+  
+  .socials-list {
+    flex-basis: 100%;
+    margin-top: -30px;
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  .socials-list h3 {
+    line-height: 3;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 3px;
+    font-weight: 500;
+    color: rgb(66, 176, 167);
+  }
+  
+  .socials-list ul {
+    list-style-type: none;
+    line-height: 2;
+    display: inline-flex;
+    gap: 25px;
+  }
+  
+  .socials-list a {
+    color: rgb(255, 255, 255);
+    transition: all 0.3s ease;
+    font-size: 50px;
+  }
+  
+  .socials-list a:hover {
+    color: #de932b;
+  }
+  
+  .contacts-list {
+    flex-basis: 100%;
+    margin-top: -30px;
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  .contacts-list h3 {
+    line-height: 3;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 3px;
+    font-weight: 500;
+    color: rgb(66, 176, 167);
+  }
+  
+  .contacts-list ul {
+    list-style-type: none;
+    line-height: 2;
+    gap: 25px;
+  }
+  
+  .contacts-list a {
+    color: rgb(169 169 169);
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.3s ease;
+  }
+  
+  .contacts-list a:hover {
+    color: #de932b;
+  }
+  
+  .hidden-list {
+    flex-basis: 100%;
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  .hidden-list a {
+    color: rgb(66, 176, 167);
+    text-decoration: none;
+    font-size: 75px;
+    transition: all 0.3s ease;
+  }
+  
+  .hidden-list a:hover {
+    color: #de932b;
+  }
+  
+  .copyright {
+    flex-grow: 1;
+    flex-basis: 100%;
+    font-size: 1rem;
+    color: rgb(169 169 169);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 25px;
+  }
+
+/* alle ikonene side verdier */
+
+.fa-solid.fa-house {
+  font-size: 20px;
+}
+
+.fa-solid.fa-house:hover {
+  color: rgb(151, 151, 151);
+}
+
+.fa-solid.fa-hands-holding-circle {
+  font-size: 20px;
+}
+
+.fa-solid.fa-hands-holding-circle:hover {
+  color: rgb(151, 151, 151);
+}
+
+.fa-solid.fa-desktop {
+  font-size: 20px;
+}
+
+.fa-solid.fa-desktop:hover {
+  color: rgb(151, 151, 151);
+}
+
+.fa-solid.fa-magnifying-glass-chart {
+  font-size: 20px;
+}
+
+.fa-solid.fa-magnifying-glass-chart:hover {
+  color: rgb(151, 151, 151);
+}
+
+.fa-solid.fa-arrow-up-right-from-square {
+  font-size: 20px;
+}
+
+.fa-solid.fa-arrow-up-right-from-square:hover {
+  color: rgb(151, 151, 151);
+}
+
+.fa-solid.fa-bars {
+  color: rgb(151, 151, 151);
+  font-size: 45px;
+}
+
+/*media queries for smallere skjerm bredde, så på eksemplet fra forelesningene vi hadde */
+
+@media only screen and (min-width: 1022px) {
+  #front-page-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "header header header"
+      "main main main"
+      "aside aside section"
+      "footer footer footer";
+  }
+
+  header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0rem 2rem;
+  }
+
+  #nav-menu {
+    display: inline !important;
+    position: static;
+    width: fit-content;
+    border-bottom: none;
+    background: transparent;
+    padding: 0;
+  }
+
+  #nav-menu a {
+    color: rgb(66, 176, 167);
+    font-size: 1rem;
+  }
+
+  
+  #nav-menu a:hover {
+    color: rgb(103, 103, 103);
+    border-bottom: solid 3px #bda243;
+    padding-bottom: 12px;
+  }
+  
+
+  #nav-menu li {
+    display: inline-block;
+    margin: 0 3rem;
+    margin-right: 0;
+  }
+
+  .article-content {
+    width: 100%;
+    padding: 5rem;
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    display: grid;
+    max-width: 920px;
+  }
+
+  main {
+    grid-area: main;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3rem;
+    padding-top: 1rem;
+    background: rgba(47,47,47,1);
+    justify-content: center;
+  }
+
+  #breadcrumbs {
+    padding: 5rem;
+    margin: 0;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    width: 100%;
+    max-width: 920px;
+  }
+
+  .table-list{
+    width: 100%;
+      display: grid;
+      grid-template-columns: 0fr 2fr 2fr 2fr;
+      padding: 5rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      max-width: 920px;
+      overflow-x: hidden;
+  }
+
+  .table-item {
+    background-color:  rgb(49 79 112);
+    border: 2px solid #2f2f2f;
+    color: rgb(255, 255, 255);
+    padding: 1rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .table-info {
+    background-color: rgb(229 229 229 / 80%);
+    border: 2px solid #2f2f2f;
+    color: rgb(0, 0, 0);
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  #sources {
+    padding: 2rem 5rem;
+    color: rgb(169 169 169);
+    max-width: 920px;
+  }
+
+  #return-to-main-page{
+    padding: 2rem 5rem;
+      width: 100%;
+      max-width: 920px;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+  }
+
+  #return-to-main-page a{
+    text-decoration: none;
+      font-size: 1.3rem;
+      display: block;
+      padding: 0.5rem 2rem;
+      border-radius: 3px 3px 3px 3px;
+      background-color: #c0c0c0;
+      font-weight: 500;
+      color: black;
+      transition: all 0.2s ease-in;
+      text-align: center;
+      width: 36%;
+  }
+
+  aside{
+    grid-area: aside;
+    display: flex;
+    flex-wrap: wrap;
+    background: rgb(88,88,88);
+    background: linear-gradient(90deg, rgba(88,88,88,1) 0%, rgba(213,213,213,1) 45%, rgba(205,205,205,1) 55%, rgba(88,88,88,1) 100%);
+    padding: 3rem;
+    justify-content: center;
+  }
+
+  article {
+    flex-basis: 200px;
+    flex-grow: 1;
+    border: 1px solid #000000;
+    border-radius: 0 0 25px 25px;
+    background-color: #2f2f2f;
+    max-width: 300px;
+    margin: 0;
+    display: inline-grid;
+  }
+
+  article:first-child{
+    margin-right: 70px;
+  }
+
+  article img {
+    width: 100%;
+    height: 250px;
+  }
+
+  #section-title{
+    padding: 3rem;
+      padding-bottom: 0;
+      padding-top: 2rem;
+      padding-left: 6rem;
+      font-size: 2.8rem;
+      letter-spacing: 5px;
+      -webkit-text-stroke: 1px rgb(169 169 169);
+      font-weight: 500;
+      color: transparent;
+  }
+  
+  
+  #section-undertitle{
+    padding: 3rem;
+      padding-top: 0.5rem;
+      padding-bottom: 0rem;
+      padding-left: 9rem;
+      font-size: 2.8rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgb(169 169 169);
+      font-weight: 500;   
+  }
+
+  #section-p{
+    padding: 3rem;
+      padding-top: 1rem;
+      font-size: 1.4rem;
+      padding-bottom: 1rem;
+      color: rgb(169 169 169);
+  }
+
+
+  #ham-icon {
+    display: none;
+  }
+
+  #share-buttons{
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: 5rem;
+    gap: 5rem;
+    flex-direction: unset;
+    align-items: unset;
+  }
+
+  .container-for-services-policies-socials {
+    display: flex;
+    padding: 2rem;
+    flex-direction: initial;
+  }
+
+  .container-for-contacts-copyright {
+    display: flex;
+    padding: 2rem;
+    flex-direction: initial;
+  }
+
+  .services-list {
+    flex-basis: 100%;
+    margin-top: -30px;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .policies-list {
+    flex-basis: 100%;
+    margin-top: -30px;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .socials-list {
+    flex-basis: 100%;
+    margin-top: -30px;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .contacts-list {
+    flex-basis: 100%;
+    margin-top: -30px;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .hidden-list {
+    flex-basis: 100%;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 25px;
+  }
+
+ 
+}
